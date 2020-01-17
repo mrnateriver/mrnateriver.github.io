@@ -1,0 +1,16 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+$max-body-width: 768px;
+
+$row-subtitle-color: #555;
+
+$row-subtitle-font-size: 0.9em;
+$row-subtitle-font-size-small: $row-subtitle-font-size * 0.9;
+
+$section-params-vertical-margin: 16px;
+
+$section-siblings-vertical-margin: $section-params-vertical-margin / 2;
+
+$section-rows-vertical-margin: $section-params-vertical-margin * 1.7;
+$section-rows-vertical-margin-small: $section-rows-vertical-margin * 0.7;
+$section-rows-vertical-margin-big: $section-rows-vertical-margin * 2;

@@ -1,0 +1,65 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+@import 'mixins';
+@import 'vars';
+
+/* Guess what :) */
+.gdpr-disclaimer {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  transition: bottom 0.5s ease-in;
+  &[dismissed] {
+    bottom: -400px; // should be well enough to cover panel's height
+  }
+
+  padding: 1em calc((100% - #{$max-body-width}) / 2);
+  background: #222222;
+  color: white;
+
+  display: flex;
+  @media only screen and (max-width: 580px) {
+    display: block;
+  }
+
+  &-content {
+    padding: 0 $section-params-vertical-margin / 2 0 $section-params-vertical-margin;
+    font-size: $row-subtitle-font-size;
+
+    a {
+      color: deepskyblue;
+    }
+  }
+
+  &-buttons {
+    padding: 0 $section-params-vertical-margin 0 $section-params-vertical-margin / 2;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+      color: currentColor;
+      border: none;
+      outline: none;
+      padding: 7px 10px;
+      margin: 0 $section-siblings-vertical-margin;
+
+      background: orangered;
+      transition: background-color 0.2s linear;
+      &:hover {
+        background: #ff871e;
+      }
+      &:active {
+        background: #912e00;
+      }
+      &:focus {
+        outline: 2px solid orange;
+      }
+    }
+  }
+
+}

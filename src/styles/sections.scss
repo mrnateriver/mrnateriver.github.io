@@ -1,0 +1,107 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+@import 'mixins';
+@import 'vars';
+
+section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.078);
+  background: white;
+
+  &:last-of-type {
+    border: none;
+  }
+
+  @media screen {
+    > .contents {
+      display: none;
+    }
+    &[expanded] > .contents {
+      display: block;
+      overflow-x: hidden;
+    }
+
+    > ul.contents > li, > .contents > .param {
+      animation-duration: 250ms;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+
+      @for $i from 1 to 21 {
+        &:nth-child(#{$i}) {
+          animation-delay: ($i - 1) * 50ms;
+        }
+      }
+    }
+    &[expanded] > ul.contents > li, &[expanded] > .contents > .param {
+      animation-name: animateIn;
+    }
+
+    &[expanded] > h2.section-title {
+      margin-bottom: $section-rows-vertical-margin-small;
+
+      &:after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @include narrow-screen-breakpoint {
+    > .contents {
+      padding: 0 $section-rows-vertical-margin-small;
+    }
+  }
+
+  > h2.section-title {
+    padding: $section-rows-vertical-margin-small;
+
+    @media print {
+      margin: 0 $section-rows-vertical-margin-small * -1 $section-rows-vertical-margin * -0.2;
+    }
+
+    @media screen {
+      margin: 0 $section-rows-vertical-margin-small * -1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.2s linear;
+
+      &:hover {
+        background: #efefef61;
+      }
+
+      &:after {
+        content: '';
+        margin-right: $section-rows-vertical-margin * 0.35;
+        display: inline-block;
+        vertical-align: top;
+        border-style: solid;
+        border-width: 0.12em 0.12em 0 0;
+        border-color: $row-subtitle-color;
+        height: 0.55em;
+        width: 0.55em;
+        transform: rotate(135deg);
+        position: relative;
+        left: 0.15em;
+        bottom: 0.12em;
+        transition: transform 0.2s ease-in-out, position 0.2s ease-in-out;
+      }
+    }
+
+    @include narrow-screen-breakpoint {
+      padding: $section-rows-vertical-margin-small;
+      margin: 0;
+    }
+  }
+}
+
+@keyframes animateIn {
+  0% {
+      opacity: 0;
+      transform: translateX(32px);
+  }
+
+  100% {
+      opacity: 1;
+  }
+}

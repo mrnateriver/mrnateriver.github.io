@@ -1,0 +1,99 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+@import 'mixins';
+@import 'vars';
+
+html {
+  font: 16px 'Roboto', sans-serif;
+}
+@include narrow-screen-breakpoint {
+  html {
+    font-size: 14px;
+  }
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 2em;
+  margin: 0;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: $section-rows-vertical-margin-small 0;
+}
+h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: $section-siblings-vertical-margin 0;
+}
+h4 {
+  font-weight: 100;
+  font-size: 1.3em;
+  margin: $section-siblings-vertical-margin / 5 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0069c5;
+}
+
+article {
+  max-width: $max-body-width;
+  padding-bottom: 15vh;
+  margin: 1.4em auto;
+  
+  @include narrow-screen-breakpoint {
+    max-width: 100%;
+  }
+
+  @media print {
+    margin: 0 auto;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.material-icon, a[target="_blank"]:before {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+html[lang=ru] *[lang]:not([lang=ru]) {
+  display: none;
+}
+html[lang=en] *[lang]:not([lang=en]) {
+  display: none;
+}
+
+
+@import 'header';
+@import 'sections';
+@import 'personal';
+@import 'education';
+@import 'work';
+@import 'skills';
+@import 'projects';
+@import 'gdpr';

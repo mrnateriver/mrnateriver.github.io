@@ -1,0 +1,58 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+@import 'vars';
+
+/* Skills list */
+section {
+  > .skills-list.contents {
+    margin: 0 0 $section-rows-vertical-margin 0;
+
+    @media screen {
+      flex-wrap: wrap;
+    }
+
+    @media print {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      column-gap: $section-siblings-vertical-margin;
+      row-gap: $section-siblings-vertical-margin;
+    }
+  }
+
+  @media screen {
+    &[expanded] > .skills-list.contents {
+      display: flex;
+    }
+  }
+}
+
+.skills-list {
+  > li {
+    background: #fbfbfb;
+    padding: $section-siblings-vertical-margin;
+    box-sizing: border-box;
+    max-width: 176px;
+
+    @media screen {
+      margin: $section-siblings-vertical-margin;
+      flex: 1 1 150px;
+      border-radius: 0.3em;
+      box-shadow: 0 0 2px #ccc;
+    }
+
+    @media print {
+      page-break-inside: avoid;
+      border: 1px solid #ccc;
+    }
+  }
+
+  .skill {
+    display: block;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    color: $row-subtitle-color;
+    font-size: $row-subtitle-font-size;
+  }
+}

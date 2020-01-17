@@ -1,0 +1,15 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+@import 'vars';
+
+@mixin external-url {
+  content: 'launch';
+  vertical-align: middle;
+  margin-right: $section-siblings-vertical-margin / 2;
+}
+
+@mixin narrow-screen-breakpoint() {
+  @media only screen and (max-width: 835px) {
+    @content;
+  }
+}

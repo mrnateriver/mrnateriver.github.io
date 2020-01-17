@@ -1,0 +1,121 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+@import 'mixins';
+@import 'vars';
+
+/* Projects list */
+.project {
+  display: flex;
+
+  margin: 0 0 $section-rows-vertical-margin-big 0;
+  @media print {
+    margin: 0 0 $section-rows-vertical-margin 0;
+    page-break-inside: avoid;
+  }
+
+  &-prefix {
+    width: 95px;
+  }
+  &-logo {
+    position: relative;
+    margin-bottom: $section-params-vertical-margin;
+
+    > img {
+      max-width: 60px;
+      border-radius: 14px;
+    }
+
+    &.multilogo {
+      margin-bottom: 90px;
+
+      > img {
+        max-width: 50px;
+        position: absolute;
+      }
+
+      @for $i from 0 to 5 {
+        > .logo-#{$i + 1} {
+          top: $i * 6px;
+          left: $i * 6px;
+          z-index: 1 + $i;
+        }
+      }
+    }
+  }
+
+  &-stack {
+    font-size: $row-subtitle-font-size;
+    color: $row-subtitle-color;
+
+    > li {
+      margin: 0 0 $section-siblings-vertical-margin 0;
+    }
+  }
+
+  &-info {
+    flex: 1;
+
+    > p {
+      font-size: $row-subtitle-font-size;
+    }
+
+    > .project-urls-title {
+      font-size: $row-subtitle-font-size-small;
+    }
+
+    .project-urls {
+      font-size: $row-subtitle-font-size-small;
+
+      a[target="_blank"]:before {
+        @include external-url;
+        font-size: 14px;
+      }
+
+      @media print {
+        a {
+          > span {
+            display: none;
+          }
+
+          &:after {
+            content: attr(href);
+          }
+        }
+      }
+    }
+  }
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include narrow-screen-breakpoint {
+      display: block;
+    }
+  }
+  &-type {
+    font-size: $row-subtitle-font-size;
+
+    &-oss {
+      &:before {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: $section-siblings-vertical-margin;
+        content: '';
+        width: 16px;
+        height: 16px;
+        background: url('../../assets/star_icon.svg');
+        background-size: contain;
+      }
+    }
+  }
+  &-title {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  &-copyright {
+    color: $row-subtitle-color;
+    white-space: nowrap;
+  }
+}
