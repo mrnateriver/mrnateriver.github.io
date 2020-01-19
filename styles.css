@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic');
+
+:root {
+    --body-width: 768px;
+    --section-params-vertical-margin: 1em;
+    --section-siblings-vertical-margin: calc(var(--section-params-vertical-margin) / 2);
+    --section-rows-vertical-margin: 1.7em;
+    --row-subtitle-color: #555;
+    --row-subtitle-font-size: 0.9em;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    font-weight: 100;
+    font-size: 2em;
+    box-sizing: border-box;
+    background: white;
+    transition: all 0.2s ease-out;
+    padding: 0.83em calc((100% - var(--body-width)) / 2);
+}
+h1[sticky] {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.078);
+    box-shadow: 0 2px 5px #ccc;
+}
+
+h2, h3, h4 {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: #0069c5;
+}
+
+article {
+    max-width: var(--body-width);
+    margin: 1.4em auto;
+}
+
+section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.078);
+    background: white;
+}
+
+section > .contents {
+    display: none;
+}
+section[expanded] > .contents {
+    display: block;
+}
+
+.param {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin: var(--section-params-vertical-margin) 0;
+}
+.param-name {
+    font-weight: 200;
+}
+.param-value {
+    margin-left: auto;
+}
+
+/* Specific link types */
+.telegram-link {
+    vertical-align: middle;
+}
+.telegram-link > img {
+    margin-left: var(--section-siblings-vertical-margin);
+    width: 16px;
+    height: 16px;
+}
+
+.mail-link {
+    margin: 0 0.25em;
+}
+
+.profile-link {
+    margin-left: var(--section-siblings-vertical-margin);
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+}
+.profile-link > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+svg.octicon {
+    width: 1.2em;
+    height: 1.5em;
+}
+svg.octicon > path {
+    fill: black;
+}
+
+/* Education section */
+.education-row {
+    margin: var(--section-rows-vertical-margin) 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.education-degree {
+    font-weight: 500;
+}
+.education-university {
+    text-align: right;
+    flex: 1;
+}
+.education-years {
+    color: #777777;
+    display: block;
+    font-size: 0.8em;
+    margin-left: var(--section-siblings-vertical-margin);
+}
+.education-graduation-project {
+    color: var(--row-subtitle-color);
+    font-size: var(--row-subtitle-font-size);
+    margin: var(--section-siblings-vertical-margin) 0 0 0;
+    flex: 0 0 100%;
+}
+
+/* Work experience section */
+.work-row {
+    display: flex;
+    margin: calc(var(--section-rows-vertical-margin) * 2) 0;
+}
+.work-prefix {
+    flex: 0 0 120px;
+}
+.work-info {
+    flex: 1;
+}
+
+.work-prefix > span, .work-info > span {
+    display: block;
+    margin-bottom: var(--section-siblings-vertical-margin);
+}
+
+.work-company-logo {
+    width: 100px;
+}
+.work-company-logo > img {
+    max-width: 100%;
+}
+
+.work-period {
+    color: var(--row-subtitle-color);
+    font-size: calc(var(--row-subtitle-font-size) * 0.9);
+}
+.work-duration {
+    color: var(--row-subtitle-color);
+    font-size: calc(var(--row-subtitle-font-size) * 0.8);
+}
+
+.work-info > .work-company {
+    font-weight: 100;
+    font-size: 1.3em;
+    margin-bottom: 0.1em;
+}
+.work-info > .work-company-extra {
+    color: var(--row-subtitle-color);
+    font-size: calc(var(--row-subtitle-font-size) * 0.9);
+}
+.work-info > .work-position {
+    font-size: 1.1em;
+}
+
+.work-description {
+    flex: 1 0 100%;
+    margin-top: var(--section-siblings-vertical-margin);
+    color: var(--row-subtitle-color);
+    font-size: var(--row-subtitle-font-size);
+}
