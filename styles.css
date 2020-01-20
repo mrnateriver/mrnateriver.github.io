@@ -61,6 +61,11 @@ section > .contents {
 section[expanded] > .contents {
     display: block;
 }
+section > ul.contents {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 .param {
     display: flex;
@@ -190,9 +195,7 @@ svg.octicon > path {
 /* Skills list */
 section > .skills-list.contents {
     flex-wrap: wrap;
-    list-style: none;
     margin: 0 0 var(--section-rows-vertical-margin) 0;
-    padding: 0;
 }
 section[expanded] > .skills-list.contents {
     display: flex;
