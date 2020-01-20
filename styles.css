@@ -250,6 +250,7 @@ section[expanded] > .skills-list.contents {
 }
 .project-logo > img {
     max-width: 80px;
+    border-radius: 14px;
 }
 .project-stack {
     font-size: var(--row-subtitle-font-size);
