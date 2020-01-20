@@ -10,6 +10,7 @@
 
 <body>
 
+  <!-- show phone and email links on sticky header -->
   <h1>Добровидов Евгений Геннадьевич</h1>
 
   <article>
@@ -275,7 +276,7 @@
       </ul>
     </section>
 
-    <section id="projects">
+    <section id="projects" expanded>
       <h2>Проекты</h2>
 
       <ul class="contents projects-list">
@@ -283,22 +284,30 @@
         <!-- TODO: elaborate why project might be important -->
         <li class="project">
           <div class="project-prefix">
-            <div class="project-logo-icon"></div>
-            <div class="project-language">PHP</div>
-            <div class="project-framework">Laravel</div>
-            <div class="project-copyright">© Bellini Group</div>
+            <div class="project-logo"><img src="https://backoffice.bellinigroup.ru/assets/icon-256x256.png" alt="Bellini API logo"></div>
+            <ul class="project-stack">
+              <li>PHP 7.1</li>
+              <li>Laravel</li>
+              <li>MySQL 5.7</li>
+              <li>Redis</li>
+            </ul>
           </div>
           <div class="project-info">
-            <span class="project-title">REST API бизнес-процессов</span>
-            <span class="project-description">API для управления бизнес-процессами на всех уровнях, начиная от внутренних процессов и бэкофиса, заканчивая веб-сайтами и мобильным приложением.</span>
-            <span class="project-urls">
-              <span class="project-urls-title">Примеры методов:</span>
-              <a href="https://api.bellinigroup.ru/products" target="_blank">Список продукции</a>
-              <a href="https://api.bellinigroup.ru/brands" target="_blank">Список брендов</a>
-              <a href="https://api.bellinigroup.ru/restaurants" target="_blank">Список ресторанов</a>
-              <a href="https://api.bellinigroup.ru/business/status" target="_blank">Текущие общедоступные параметры бизнес-процессов</a>
-              <span class="project-urls-ellipsis">И многие другие</span>
-            </span>
+            <div class="project-heading">
+              <h3 class="project-title">Bellini REST API</h3>
+              <div class="project-copyright">© Bellini Group</div>
+            </div>
+
+            <p class="project-description">API для управления бизнес-процессами на всех уровнях, начиная от внутренних процессов и панели управления, заканчивая веб-сайтами и мобильным приложением.</p>
+            <p class="project-technical">CRUD, валидация запросов, аутентификация с пом. bearer-токенов, RBAC/ABAC-авторизация, кэширование HTTP-ответов, OpenAPI 3.0 документация.</p>
+
+            <p class="project-urls-title">Примеры методов:</p>
+            <ul class="project-urls">
+              <li><a href="https://api.bellinigroup.ru/products" target="_blank">Список продукции</a></li>
+              <li><a href="https://api.bellinigroup.ru/brands" target="_blank">Список брендов</a></li>
+              <li><a href="https://api.bellinigroup.ru/restaurants" target="_blank">Список ресторанов</a></li>
+              <li><a href="https://api.bellinigroup.ru/business/status" target="_blank">Текущие общедоступные параметры бизнес-процессов</a></li>
+            </ul>
           </div>
         </li>
 
