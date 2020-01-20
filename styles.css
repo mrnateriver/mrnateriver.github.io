@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root {
     --body-width: 768px;
@@ -35,9 +36,19 @@ h1[sticky] {
     box-shadow: 0 2px 5px #ccc;
 }
 
-h2, h3, h4 {
+h2 {
     font-size: 1.3em;
     font-weight: 400;
+}
+h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 0 0 var(--section-siblings-vertical-margin) 0;
+}
+h4 {
+    font-weight: 100;
+    font-size: 1.3em;
+    margin: 0 0 calc(var(--section-siblings-vertical-margin) / 5) 0;
 }
 
 a {
@@ -55,18 +66,44 @@ section {
     background: white;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 section > .contents {
     display: none;
 }
 section[expanded] > .contents {
     display: block;
 }
-section > ul.contents {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+.material-icon, ul > li > a[target="_blank"]:before {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+ul > li > a[target="_blank"]:before {
+    font-size: 14px;
+    content: 'launch';
+    vertical-align: middle;
+    margin-right: calc(var(--section-siblings-vertical-margin) / 2);
 }
 
+/* Personal info */
 .param {
     display: flex;
     justify-content: space-between;
@@ -216,4 +253,47 @@ section[expanded] > .skills-list.contents {
 .skills-list .subtitle {
     color: var(--row-subtitle-color);
     font-size: var(--row-subtitle-font-size);
+}
+
+/* Projects list */
+.project {
+    display: flex;
+    margin: calc(var(--section-rows-vertical-margin) * 2) 0;
+}
+.project-prefix {
+    width: 100px;
+}
+.project-logo {
+    margin-bottom: var(--section-params-vertical-margin);
+}
+.project-logo > img {
+    max-width: 80px;
+}
+.project-stack {
+    font-size: var(--row-subtitle-font-size);
+    color: var(--row-subtitle-color);
+}
+.project-stack > li {
+    margin: 0 0 var(--section-siblings-vertical-margin) 0;
+}
+.project-info {
+    flex: 1;
+}
+.project-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-title {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.project-copyright {
+    color: var(--row-subtitle-color);
+}
+.project-info > p {
+    font-size: var(--row-subtitle-font-size);
+}
+.project-info > .project-urls-title, .project-urls {
+    font-size: calc(var(--row-subtitle-font-size) * 0.9);
 }
