@@ -80,7 +80,7 @@ section[expanded] > .contents {
     display: block;
 }
 
-.material-icon, ul > li > a[target="_blank"]:before {
+.material-icon, a[target="_blank"]:before {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -96,12 +96,6 @@ section[expanded] > .contents {
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'liga';
-}
-ul > li > a[target="_blank"]:before {
-    font-size: 14px;
-    content: 'launch';
-    vertical-align: middle;
-    margin-right: calc(var(--section-siblings-vertical-margin) / 2);
 }
 
 /* Personal info */
@@ -284,4 +278,10 @@ section[expanded] > .skills-list.contents {
 }
 .project-info > .project-urls-title, .project-urls {
     font-size: calc(var(--row-subtitle-font-size) * 0.9);
+}
+.project-urls a[target="_blank"]:before {
+    font-size: 14px;
+    content: 'launch';
+    vertical-align: middle;
+    margin-right: calc(var(--section-siblings-vertical-margin) / 2);
 }
