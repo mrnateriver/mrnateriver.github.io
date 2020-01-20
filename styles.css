@@ -39,6 +39,7 @@ h1[sticky] {
 h2 {
     font-size: 1.3em;
     font-weight: 400;
+    margin: calc(var(--section-rows-vertical-margin) * 0.7) 0;
 }
 h3 {
     font-size: 1.1em;
@@ -151,12 +152,13 @@ svg.octicon > path {
 
 /* Education section */
 .education-row {
-    margin: var(--section-rows-vertical-margin) 0;
+    margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: wrap;
 }
 .education-degree {
+    margin: 0;
     font-weight: 500;
 }
 .education-university {
@@ -179,7 +181,7 @@ svg.octicon > path {
 /* Work experience section */
 .work-row {
     display: flex;
-    margin: calc(var(--section-rows-vertical-margin) * 2) 0;
+    margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
 }
 .work-prefix {
     flex: 0 0 120px;
@@ -187,19 +189,15 @@ svg.octicon > path {
 .work-info {
     flex: 1;
 }
-
-.work-prefix > span, .work-info > span {
-    display: block;
+.work-prefix > div, .work-info > div {
     margin-bottom: var(--section-siblings-vertical-margin);
 }
-
 .work-company-logo {
     width: 100px;
 }
 .work-company-logo > img {
     max-width: 100%;
 }
-
 .work-period {
     color: var(--row-subtitle-color);
     font-size: calc(var(--row-subtitle-font-size) * 0.9);
@@ -208,23 +206,13 @@ svg.octicon > path {
     color: var(--row-subtitle-color);
     font-size: calc(var(--row-subtitle-font-size) * 0.8);
 }
-
-.work-info > .work-company {
-    font-weight: 100;
-    font-size: 1.3em;
-    margin-bottom: 0.1em;
-}
 .work-info > .work-company-extra {
     color: var(--row-subtitle-color);
     font-size: calc(var(--row-subtitle-font-size) * 0.9);
+    margin: 0 0 var(--section-siblings-vertical-margin) 0;
 }
-.work-info > .work-position {
-    font-size: 1.1em;
-}
-
 .work-description {
     flex: 1 0 100%;
-    margin-top: var(--section-siblings-vertical-margin);
     color: var(--row-subtitle-color);
     font-size: var(--row-subtitle-font-size);
 }
