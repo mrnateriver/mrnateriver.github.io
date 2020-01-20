@@ -61,16 +61,17 @@ function handleSectionClick(evt) {
 function setupStickyHeader() {
     const header = document.querySelector('h1')
     if (header) {
-        document.addEventListener('scroll', handlePageScrollForStickyHeader.bind(header, header.offsetTop), { passive: true })
+        document.addEventListener('scroll', handlePageScrollForStickyHeader.bind(header), { passive: true })
     }
 }
 
-function handlePageScrollForStickyHeader(initialOffset) {
+function handlePageScrollForStickyHeader() {
     // https://stackoverflow.com/a/3464890/5877243
     const doc = document.documentElement
     const top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0)
 
-    if (top > initialOffset) {
+    // we assume here that header should stick to the very top
+    if (top > 0) {
         this.setAttribute('sticky', '')
     } else {
         this.removeAttribute('sticky')
