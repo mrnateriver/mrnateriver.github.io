@@ -243,13 +243,13 @@ section[expanded] > .skills-list.contents {
     margin: calc(var(--section-rows-vertical-margin) * 2) 0;
 }
 .project-prefix {
-    width: 100px;
+    width: 95px;
 }
 .project-logo {
     margin-bottom: var(--section-params-vertical-margin);
 }
 .project-logo > img {
-    max-width: 80px;
+    max-width: 60px;
     border-radius: 14px;
 }
 .project-stack {
