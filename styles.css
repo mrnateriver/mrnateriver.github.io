@@ -283,6 +283,20 @@ svg.octicon > path {
     color: var(--row-subtitle-color);
     font-size: calc(var(--row-subtitle-font-size) * 0.8);
 }
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a.work-url {
+    font-size: 1em;
+}
+a.work-url:before {
+    font-size: 1em;
+    content: 'launch';
+    vertical-align: middle;
+    margin-right: calc(var(--section-siblings-vertical-margin) / 2);
+}
 .work-info > .work-company-extra {
     color: var(--row-subtitle-color);
     font-size: calc(var(--row-subtitle-font-size) * 0.9);
