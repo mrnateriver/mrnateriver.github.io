@@ -81,8 +81,8 @@ section[expanded] > .contents {
 }
 
 section > ul.contents > li {
-    animation-duration: 350ms;
-    animation-delay: calc((var(--i) - 1) * 100ms);
+    animation-duration: 250ms;
+    animation-delay: calc((var(--i) - 1) * 70ms);
     animation-fill-mode: both;
     animation-timing-function: ease-in-out;
 }
@@ -99,6 +99,43 @@ section[expanded] > ul.contents > li {
     100% {
         opacity: 1;
     }
+}
+
+section > h2:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 calc(var(--section-rows-vertical-margin) * 0.7 * -1);
+    padding: calc(var(--section-rows-vertical-margin) * 0.7);
+    transition: background-color 0.2s linear;
+}
+section[expanded] > h2:first-of-type {
+    margin-bottom: calc(var(--section-rows-vertical-margin) * 0.7);
+}
+section > h2:first-of-type:hover {
+    background: #efefef61;
+}
+
+section > h2:first-of-type:after {
+    content: '';
+    margin-right: calc(var(--section-rows-vertical-margin) * 0.35);
+    display: inline-block;
+    vertical-align: top;
+    border-style: solid;
+    border-width: 0.12em 0.12em 0 0;
+    border-color: var(--row-subtitle-color);
+    height: 0.55em;
+    width: 0.55em;
+    transform: rotate(135deg);
+    position: relative;
+    left: 0.15em;
+    bottom: 0.12em;
+    transition: transform 0.2s ease-in-out, position 0.2s ease-in-out;
+}
+section[expanded] > h2:first-of-type:after {
+    bottom: 0;
+    transform: rotate(-45deg);
 }
 
 .material-icon, a[target="_blank"]:before {
