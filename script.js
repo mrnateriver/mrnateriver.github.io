@@ -43,18 +43,18 @@ function main() {
 function setupSectionsExpansion() {
     const sections = document.querySelectorAll('section')
     sections.forEach(section => {
-        section.addEventListener('click', handleSectionClick)
+        const header = section.querySelector('h2:first-of-type');
+        if (header) {
+            header.addEventListener('click', handleSectionClick.bind(section))
+        }
     })
 }
 
 function handleSectionClick(evt) {
-    // when expanded, it should be collapsed only when clicking on the header
-    if (evt.target.tagName.startsWith('H')) {
-        if (this.hasAttribute('expanded')) {
-            this.removeAttribute('expanded')
-        } else {
-            this.setAttribute('expanded', '')
-        }
+    if (this.hasAttribute('expanded')) {
+        this.removeAttribute('expanded')
+    } else {
+        this.setAttribute('expanded', '')
     }
 }
 
