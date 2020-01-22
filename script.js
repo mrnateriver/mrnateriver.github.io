@@ -59,7 +59,7 @@ function handleSectionClick(evt) {
 }
 
 function setupStickyHeader() {
-    const header = document.querySelector('h1')
+    const header = document.querySelector('header')
     if (header) {
         document.addEventListener('scroll', handlePageScrollForStickyHeader.bind(header), { passive: true })
     }
