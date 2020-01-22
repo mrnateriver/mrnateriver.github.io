@@ -85,11 +85,15 @@ a {
 article {
     max-width: var(--body-width);
     margin: 1.4em auto;
+    padding-bottom: 25vh;
 }
 
 section {
     border-bottom: 1px solid rgba(0, 0, 0, 0.078);
     background: white;
+}
+section:last-of-type {
+    border: none;
 }
 
 ul {
