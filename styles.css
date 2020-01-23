@@ -50,6 +50,7 @@ header .contact-buttons > a {
     margin-left: var(--section-params-vertical-margin);
 }
 header .contact-buttons > a > i {
+    display: block;
     font-size: 1.6em;
 }
 
