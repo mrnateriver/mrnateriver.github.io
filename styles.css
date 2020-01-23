@@ -345,11 +345,44 @@ section[expanded] > .skills-list.contents {
     width: 95px;
 }
 .project-logo {
+    position: relative;
     margin-bottom: var(--section-params-vertical-margin);
 }
 .project-logo > img {
     max-width: 60px;
     border-radius: 14px;
+}
+.project-logo.multilogo {
+    margin-bottom: 90px;
+}
+.project-logo.multilogo > img {
+    max-width: 50px;
+    position: absolute;
+}
+.project-logo.multilogo > .logo-1 {
+    top: -15px;
+    left: -15px;
+    z-index: 1;
+}
+.project-logo.multilogo > .logo-2 {
+    top: -5px;
+    left: -5px;
+    z-index: 2;
+}
+.project-logo.multilogo > .logo-3 {
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+}
+.project-logo.multilogo > .logo-4 {
+    top: 15px;
+    left: 15px;
+    z-index: 4;
+}
+.project-logo.multilogo > .logo-5 {
+    top: 25px;
+    left: 25px;
+    z-index: 5;
 }
 .project-stack {
     font-size: var(--row-subtitle-font-size);
