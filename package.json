@@ -4,7 +4,7 @@
   "description": "Comprehensive professional CV of Evgenii Dobrovidov.",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"TODO\" && exit 1"
+    "build": "sass styles.scss styles.css --no-source-map"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://gitlab.com/mrnateriver/cv/issues"
   },
-  "homepage": "https://gitlab.com/mrnateriver/cv#readme"
+  "homepage": "https://gitlab.com/mrnateriver/cv#readme",
+  "devDependencies": {
+    "sass": "^1.25.1-test.1"
+  }
 }
