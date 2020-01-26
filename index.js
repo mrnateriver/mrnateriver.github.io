@@ -1,4 +1,4 @@
-/// Evgenii Dobrovidov (c) 2020
+/// (c) Evgenii Dobrovidov, 2020
 (function () { // using IIFE to prevent global namespace pollution
     const birthdate = new Date('1992-06-07T00:00:00.000')
 
