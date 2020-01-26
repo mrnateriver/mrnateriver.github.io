@@ -310,6 +310,15 @@ svg.octicon {
       font-size: calc(var(--row-subtitle-font-size) * 0.9);
       margin: 0 0 var(--section-siblings-vertical-margin) 0;
     }
+
+    #{$top}-url {
+      font-size: 1em;
+
+      &:before {
+        @include external-url;
+        font-size: 1em;
+      }
+    }
   }
   &-prefix > div, &-info > div {
     margin-bottom: var(--section-siblings-vertical-margin);
@@ -335,15 +344,6 @@ svg.octicon {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &-url {
-    font-size: 1em;
-
-    &:before {
-      @include external-url;
-      font-size: 1em;
-    }
   }
 
   &-description {
