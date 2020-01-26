@@ -1,0 +1,19 @@
+{
+  "name": "dobrovidov-cv",
+  "version": "0.9.0",
+  "description": "Comprehensive professional CV of Evgenii Dobrovidov.",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"TODO\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/mrnateriver/cv.git"
+  },
+  "author": "Evgenii Dobrovidov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/mrnateriver/cv/issues"
+  },
+  "homepage": "https://gitlab.com/mrnateriver/cv#readme"
+}
