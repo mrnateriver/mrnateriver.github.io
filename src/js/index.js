@@ -4,19 +4,23 @@ import '../styles/styles.scss'
 
 import { setContactDetails } from './contacts'
 import { calculateAge, calculateWorkPeriods } from './info'
-import { setupSectionsExpansion, setupStickyHeader } from './ui'
+import { setupSectionsExpansion, setupStickyHeader, setupLanguageSwitch } from './ui'
+import { updateDocumentLanguage } from './l10n'
 
 document.addEventListener('DOMContentLoaded', main)
 
 function main() {
-    setContactDetails()
+  updateDocumentLanguage()
 
-    calculateAge()
+  setupLanguageSwitch()
 
-    calculateWorkPeriods()
+  setContactDetails()
 
-    setupSectionsExpansion()
+  calculateAge()
 
-    setupStickyHeader()
+  calculateWorkPeriods()
+
+  setupSectionsExpansion()
+
+  setupStickyHeader()
 }
-
