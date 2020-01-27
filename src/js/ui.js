@@ -26,8 +26,8 @@ function handlePageScrollForStickyHeader() {
 export function setupSectionsExpansion() {
   const sections = document.querySelectorAll('section')
   for (const section of sections) {
-    const header = section.querySelector('h2:first-of-type')
-    if (header) {
+    const headers = section.querySelectorAll('h2.section-title')
+    for (const header of headers) {
       header.addEventListener('click', handleSectionClick.bind(section))
     }
   }
