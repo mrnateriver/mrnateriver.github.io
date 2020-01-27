@@ -1,0 +1,53 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+/* Personal info */
+.param {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  margin: var(--section-params-vertical-margin) 0;
+
+  &-name {
+    font-weight: 200;
+  }
+
+  &-value {
+    margin-left: auto;
+  }
+}
+
+/* Specific link types */
+.telegram-link {
+  vertical-align: middle;
+
+  > img {
+    margin-left: var(--section-siblings-vertical-margin);
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.mail-link {
+  margin: 0 0.25em;
+}
+
+.profile-link {
+  margin-left: var(--section-siblings-vertical-margin);
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+
+  > img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+svg.octicon {
+  width: 1.2em;
+  height: 1.5em;
+
+  > path {
+    fill: black;
+  }
+}

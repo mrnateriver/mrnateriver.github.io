@@ -1,0 +1,84 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+// We could've used SASS variables, but they cannot be changed with @media-queries, so CSS custom properties FTW
+:root {
+  --body-width: 768px;
+  --section-params-vertical-margin: 1em;
+  --section-siblings-vertical-margin: calc(var(--section-params-vertical-margin) / 2);
+  --section-rows-vertical-margin: 1.7em;
+  --row-subtitle-color: #555;
+  --row-subtitle-font-size: 0.9em;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 2em;
+  margin: 0;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: calc(var(--section-rows-vertical-margin) * 0.7) 0;
+}
+h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 0 0 var(--section-siblings-vertical-margin) 0;
+}
+h4 {
+  font-weight: 100;
+  font-size: 1.3em;
+  margin: 0 0 calc(var(--section-siblings-vertical-margin) / 5) 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0069c5;
+}
+
+article {
+  max-width: var(--body-width);
+  margin: 1.4em auto;
+  padding-bottom: 25vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.material-icon, a[target="_blank"]:before {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+@import 'header';
+@import 'sections';
+@import 'personal';
+@import 'education';
+@import 'work';
+@import 'skills';
+@import 'projects';

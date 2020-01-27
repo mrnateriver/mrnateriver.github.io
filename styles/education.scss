@@ -1,0 +1,35 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+/* Education section */
+.education {
+  &-row {
+    margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  &-degree {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &-university {
+    text-align: right;
+    flex: 1;
+  }
+
+  &-years {
+    color: #777777;
+    display: block;
+    font-size: 0.8em;
+    margin-left: var(--section-siblings-vertical-margin);
+  }
+
+  &-graduation-project {
+    color: var(--row-subtitle-color);
+    font-size: var(--row-subtitle-font-size);
+    margin: var(--section-siblings-vertical-margin) 0 0 0;
+    flex: 0 0 100%;
+  }
+}

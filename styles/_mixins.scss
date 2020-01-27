@@ -1,0 +1,7 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+@mixin external-url {
+  content: 'launch';
+  vertical-align: middle;
+  margin-right: calc(var(--section-siblings-vertical-margin) / 2);
+}

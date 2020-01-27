@@ -4,7 +4,7 @@
   "description": "Comprehensive professional CV of Evgenii Dobrovidov.",
   "main": "src/index.js",
   "scripts": {
-    "build": "sass styles.scss styles.css --no-source-map"
+    "build": "webpack --mode=production && sass styles/styles.scss dist/styles.css --no-source-map"
   },
   "repository": {
     "type": "git",

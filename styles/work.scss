@@ -1,0 +1,66 @@
+/// (c) Evgenii Dobrovidov, 2020
+
+@import 'mixins';
+
+/* Work experience section */
+.work {
+  $top: &;
+
+  &-row {
+    display: flex;
+    margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
+  }
+
+  &-prefix {
+    flex: 0 0 120px;
+  }
+  &-info {
+    flex: 1;
+
+    > #{$top}-company-extra {
+      color: var(--row-subtitle-color);
+      font-size: calc(var(--row-subtitle-font-size) * 0.9);
+      margin: 0 0 var(--section-siblings-vertical-margin) 0;
+    }
+
+    #{$top}-url {
+      font-size: 1em;
+
+      &:before {
+        @include external-url;
+        font-size: 1em;
+      }
+    }
+  }
+  &-prefix > div, &-info > div {
+    margin-bottom: var(--section-siblings-vertical-margin);
+  }
+
+  &-company-logo {
+    width: 100px;
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  &-period {
+    color: var(--row-subtitle-color);
+    font-size: calc(var(--row-subtitle-font-size) * 0.9);
+  }
+  &-duration {
+    color: var(--row-subtitle-color);
+    font-size: calc(var(--row-subtitle-font-size) * 0.8);
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-description {
+    flex: 1 0 100%;
+    color: var(--row-subtitle-color);
+    font-size: var(--row-subtitle-font-size);
+  }
+}
