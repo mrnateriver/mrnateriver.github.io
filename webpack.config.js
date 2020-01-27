@@ -30,6 +30,7 @@ module.exports = {
       minify: {
         collapseInlineTagWhitespace: true,
         collapseWhitespace: true,
+        conservativeCollapse: true,
         decodeEntities: true,
         quoteCharacter: '"',
         removeComments: true,
