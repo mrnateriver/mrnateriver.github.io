@@ -15,18 +15,18 @@ section {
     display: block;
   }
 
-  > ul.contents > li {
+  > ul.contents > li, > .contents > .param {
     animation-duration: 250ms;
     animation-fill-mode: both;
     animation-timing-function: ease-in-out;
 
     @for $i from 1 to 21 {
       &:nth-child(#{$i}) {
-        animation-delay: ($i - 1) * 70ms;
+        animation-delay: ($i - 1) * 50ms;
       }
     }
   }
-  &[expanded] > ul.contents > li {
+  &[expanded] > ul.contents > li, &[expanded] > .contents > .param {
     animation-name: animateIn;
   }
 
