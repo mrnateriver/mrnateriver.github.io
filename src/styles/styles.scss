@@ -75,6 +75,14 @@ ul {
   font-feature-settings: 'liga';
 }
 
+html[lang=ru] *[lang]:not([lang=ru]) {
+  display: none;
+}
+html[lang=en] *[lang]:not([lang=en]) {
+  display: none;
+}
+
+
 @import 'header';
 @import 'sections';
 @import 'personal';

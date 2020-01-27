@@ -15,14 +15,21 @@ header {
   .contact-buttons {
     display: flex;
     align-items: center;
-    transition: opacity 0.2s linear;
-    opacity: 0;
-    pointer-events: none;
 
     > a {
       display: block;
-      user-select: none;
       margin-left: var(--section-params-vertical-margin);
+
+      &.language_selector {
+        border-bottom: 1px dashed currentColor;
+      }
+
+      &:not(.language_selector) {
+        user-select: none;
+        transition: opacity 0.2s linear;
+        opacity: 0;
+        pointer-events: none;
+      }
 
       > i {
         display: block;
@@ -35,7 +42,7 @@ header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.078);
     box-shadow: 0 2px 5px #ccc;
 
-    .contact-buttons {
+    .contact-buttons > a:not(.language_selector) {
       opacity: 1;
       pointer-events: all;
     }
