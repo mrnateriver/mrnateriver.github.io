@@ -13,7 +13,6 @@
 <body>
   <!--
     TODO:
-    3) Hide contact details from HTML
     4) Publish on GitHub pages
     5) Add this CV to projects section
     6) Create EN version
@@ -23,8 +22,8 @@
   <header>
     <h1>Добровидов Евгений Геннадьевич</h1>
     <div class="contact-buttons">
-      <a href="tel:+79130440103"><i class="material-icon">phone</i></a>
-      <a href="mailto:mr.nate.river@gmail.com"><i class="material-icon">mail_outline</i></a>
+      <a id="header_phone_link"><i class="material-icon">phone</i></a>
+      <a id="header_email"><i class="material-icon">mail_outline</i></a>
     </div>
   </header>
 
@@ -46,18 +45,16 @@
         <div class="param">
           <span class="param-name">Моб. телефон</span>
           <span class="param-value">
-            <a class="phone-link" href="tel:+79130440103">+7 (913) 044-01-03</a>
-            <a class="telegram-link" href="tg://msg?to=+79130440103"><img
-                src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram logo"></a>
+            <a id="details_phone_link" class="phone-link"></a>
+            <a id="details_telegram_link" class="telegram-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram logo">
+            </a>
           </span>
         </div>
 
         <div class="param">
           <span class="param-name">Адрес эл. почты</span>
-          <span class="param-value">
-            <a class="mail-link" href="mailto:mr.nate.river@gmail.com">mr.nate.river@gmail.com</a>
-            <a class="mail-link" href="mailto:edobrovidov@yandex.ru">edobrovidov@yandex.ru</a>
-          </span>
+          <span id="details_emails" class="param-value"></span>
         </div>
 
         <div class="param">
