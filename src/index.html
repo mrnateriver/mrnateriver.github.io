@@ -12,7 +12,6 @@
   <!--
     TODO:
     4) Publish on GitHub pages
-    6) Create EN version
     7) Test on mobile
   -->
 
@@ -215,7 +214,7 @@
             <p class="work-description" lang="ru">
               В обязанности входит:
               проектирование АСУ БП;
-              разработка REST(-ish) API для управления бизнес-процессами (PHP 7.2, позднее Rust);
+              разработка REST(-ish) API для управления бизнес-процессами (PHP 7.2);
               разработка платформы для быстрого шаблонного создания сайтов компании на JS/TS, с использованием Webpack и некоторых собственных «ноу-хау»;
               разработка серверной составляющей сайтов (SSR на node.js);
               разработка клиентской составляющей сайтов (Vue.js) и административных сервисов (Angular, WS backend на node.js);
@@ -224,7 +223,7 @@
             </p>
             <p class="work-description" lang="en">
               Responsibilities:
-              develop REST(-ish) API for managing business processes (PHP 7.2, later Rust);
+              develop REST(-ish) API for managing business processes (PHP 7.2);
               develop platform for rapid development of websites for different brands using a common template (JS/TS, Webpack, and several custom solutions);
               develop websites themselves using Vue.js and TS;
               develop websites backend (SSR for Vue.js);
@@ -330,7 +329,8 @@
     </section>
 
     <section id="projects">
-      <h2 class="section-title">Проекты</h2>
+      <h2 class="section-title" lang="ru">Проекты</h2>
+      <h2 class="section-title" lang="en">Projects</h2>
 
       <ul class="contents projects-list">
         <li class="project">
@@ -342,10 +342,13 @@
             </ul>
           </div>
           <div class="project-info">
-            <h3 class="project-title">Это резюме</h3>
-            <p class="project-description">"Навороченное" резюме. Статичная верстка, простенькие скрипты на JS, собираемые Webpack'ом. SCSS, обрабатываемый PostCSS с пом. того же Webpack. Локализация.</p>
+            <h3 class="project-title" lang="ru">Это резюме</h3>
+            <h3 class="project-title" lang="en">This CV</h3>
+            <p class="project-description" lang="ru">"Навороченное" резюме. Статичная верстка, простенькие скрипты на JS, собираемые Webpack'ом. SCSS, обрабатываемый PostCSS с пом. того же Webpack. Локализация.</p>
+            <p class="project-description" lang="en">Glorified CV. Static markup, simple JS scripts, bundled with Webpack. SCSS, processed with PostCSS. Localization.</p>
             <ul class="project-urls">
-              <li><a href="https://gitlab.com/mrnateriver/cv" target="_blank">Исходный код</a></li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/cv" target="_blank">Исходный код</a></li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/cv" target="_blank">Source code</a></li>
             </ul>
           </div>
         </li>
@@ -366,15 +369,24 @@
               <div class="project-copyright">© Bellini Group</div>
             </div>
 
-            <p class="project-description">API для управления бизнес-процессами на всех уровнях, начиная от внутренних процессов и панели управления, заканчивая веб-сайтами и мобильным приложением.</p>
-            <p class="project-technical">CRUD, валидация запросов, аутентификация с пом. bearer-токенов, RBAC/ABAC-авторизация, кэширование HTTP-ответов, воркеры на supervisord, OpenAPI 3.0 документация. CD с пом. CircleCI.</p>
+            <p class="project-description" lang="ru">API для управления бизнес-процессами на всех уровнях, начиная от внутренних процессов и панели управления, заканчивая веб-сайтами и мобильным приложением.</p>
+            <p class="project-description" lang="en">API for managing business processes on every level, from internal workflows and control interfaces, to client websites and mobile applications.</p>
 
-            <p class="project-urls-title">Примеры методов:</p>
+            <p class="project-technical" lang="ru">CRUD, валидация запросов, аутентификация с пом. bearer-токенов, RBAC/ABAC-авторизация, кэширование HTTP-ответов, воркеры на supervisord, OpenAPI 3.0 спецификация. CD с пом. CircleCI.</p>
+            <p class="project-technical" lang="en">CRUD, requests validation, authentication using bearer-tokens, RBAC/ABAC-authorization, HTTP-responses caching, workers with supervisord, OpenAPI 3.0 specification. CD with CircleCI.</p>
+
+            <p class="project-urls-title" lang="ru">Примеры методов:</p>
+            <p class="project-urls-title" lang="en">Endpoints examples:</p>
             <ul class="project-urls">
-              <li><a href="https://api.bellinigroup.ru/products" target="_blank">Список продукции</a></li>
-              <li><a href="https://api.bellinigroup.ru/brands" target="_blank">Список брендов</a></li>
-              <li><a href="https://api.bellinigroup.ru/restaurants" target="_blank">Список ресторанов</a></li>
-              <li><a href="https://api.bellinigroup.ru/business/status" target="_blank">Текущие общедоступные параметры бизнес-процессов</a></li>
+              <li lang="ru"><a href="https://api.bellinigroup.ru/products" target="_blank">Список продукции</a></li>
+              <li lang="ru"><a href="https://api.bellinigroup.ru/brands" target="_blank">Список брендов</a></li>
+              <li lang="ru"><a href="https://api.bellinigroup.ru/restaurants" target="_blank">Список ресторанов</a></li>
+              <li lang="ru"><a href="https://api.bellinigroup.ru/business/status" target="_blank">Текущие общедоступные параметры бизнес-процессов</a></li>
+
+              <li lang="en"><a href="https://api.bellinigroup.ru/products" target="_blank">Products list</a></li>
+              <li lang="en"><a href="https://api.bellinigroup.ru/brands" target="_blank">Brands list</a></li>
+              <li lang="en"><a href="https://api.bellinigroup.ru/restaurants" target="_blank">Restaurants list</a></li>
+              <li lang="en"><a href="https://api.bellinigroup.ru/business/status" target="_blank">User-accessible business settings</a></li>
             </ul>
           </div>
         </li>
@@ -393,12 +405,16 @@
           </div>
           <div class="project-info">
             <div class="project-heading">
-              <h3 class="project-title">Веб-сайты службы доставки ресторанов</h3>
+              <h3 class="project-title" lang="ru">Веб-сайты службы доставки ресторанов</h3>
+              <h3 class="project-title" lang="en">Websites for restaurants' delivery services</h3>
               <div class="project-copyright">© Bellini Group</div>
             </div>
 
-            <p class="project-description">Каталог блюд и оформление заказов с доставкой, а также страницы со статичным содержимым: например, информация об организации.</p>
-            <p class="project-technical">Фронтенд на Vue.js и TypeScript, бэкенд SSR на JavaScript. Все сайты делят общий код, но могут его переопределять с пом. собственного плагина для Webpack; реализованы в виде пакетов в монорепозитории. Собственная система сборки, абстракция от Webpack'а. CD с пом. CircleCI.</p>
+            <p class="project-description" lang="ru">Каталог блюд и оформление заказов с доставкой, а также страницы со статичным содержимым: например, информация об организации.</p>
+            <p class="project-description" lang="en">Products catalog and order placement, as well as static pages.</p>
+
+            <p class="project-technical" lang="ru">Фронтенд на Vue.js и TypeScript, бэкенд SSR на JavaScript. Все сайты делят общий код, но могут его переопределять с пом. собственного плагина для Webpack; реализованы в виде пакетов в монорепозитории. Собственная система сборки, абстракция от Webpack'а. CD с пом. CircleCI.</p>
+            <p class="project-technical" lang="en">Frontend in Vue.js and TypeScript, SSR backend in JavaScript. All websites use common code, but can override it using a custom Webpack plugin; implemented as packages in monorepo. Custom build system for abstraction over Webpack'а. CD using CircleCI.</p>
 
             <ul class="project-urls">
               <li><a href="https://pizzapertsy.ru" target="_blank">pizzapertsy.ru</a></li>
@@ -425,11 +441,14 @@
           </div>
           <div class="project-info">
             <div class="project-heading">
-              <h3 class="project-title">Панель управления бизнес-процессами</h3>
+              <h3 class="project-title" lang="ru">Панель управления бизнес-процессами</h3>
+              <h3 class="project-title" lang="en">Control panel for business processes</h3>
               <div class="project-copyright">© Bellini Group</div>
             </div>
 
-            <p class="project-technical">Полноценный административный интерфейс на Angular 8 и Angular Material. Расширяемая архитектура с пом. независимых модулей. Система блокировок ресурсов на запись и чтение в реальном времени с пом. WebSocket'ов и отдельного бэкенда.</p>
+            <p class="project-technical" lang="ru">Полноценный административный интерфейс на Angular 8 и Angular Material. Расширяемая архитектура с пом. независимых модулей. Система блокировок ресурсов на запись и чтение в реальном времени с пом. WebSocket'ов и отдельного бэкенда.</p>
+            <p class="project-technical" lang="en">Full-blown administrative interface in Angular 8 and Angular Material. Extensible architecture with independent modules, interacting via a collection of contracts. Resources R/W locking system using WebSocket connection and a separate backend in JavaScript.</p>
+
             <ul class="project-urls">
               <li><a href="https://backoffice.bellinigroup.ru" target="_blank">backoffice.bellinigroup.ru</a></li>
             </ul>
@@ -445,11 +464,14 @@
           </div>
           <div class="project-info">
             <div class="project-heading">
-              <h3 class="project-title">Мобильное приложение Bellini Bonus</h3>
+              <h3 class="project-title" lang="ru">Мобильное приложение Bellini Bonus</h3>
+              <h3 class="project-title" lang="en">Bellini Bonus mobile application</h3>
               <div class="project-copyright">© Bellini Group</div>
             </div>
 
-            <p class="project-description">Приложение для клиентов сети ресторанов Bellini Group. Позволяет использовать QR-код вместо пластиковой бонусной карты, а также получать уведомления о заказах и просматривать их историю.</p>
+            <p class="project-description" lang="ru">Приложение для клиентов сети ресторанов Bellini Group. Позволяет использовать QR-код вместо пластиковой бонусной карты, а также получать уведомления о заказах и просматривать их историю.</p>
+            <p class="project-description" lang="en">Application for clients of Bellini Group restaurants. Allows using a QR-code instead of a physical loyalty card, as well as receiving various notifications and checking order history.</p>
+
             <ul class="project-urls">
               <li><a href="https://play.google.com/store/apps/details?id=ru.bellinigroup.restaurantapp" target="_blank">Google Play</a></li>
               <li><a href="https://apps.apple.com/us/app/bellini-bonus/id1447377082?ls=1" target="_blank">AppStore</a></li>
@@ -473,8 +495,12 @@
               <div class="project-copyright">© hockeystats.ru</div>
             </div>
 
-            <p class="project-description">Стартап на заказ. Веб-приложение для регистрации событий в хоккейных матчах в реальном времени, а также для последующего просмотра собранной статистики.</p>
-            <p class="project-technical">Поддерживается полноценная навигация и работа с клавиатуры. Используется FS API для импорта/экспорта файлов. Бэкенд на PHP 5.6. Реализована полноценная панель управления для редактирования команд, игроков, собранной статистики матчей и др.</p>
+            <p class="project-description" lang="ru">Стартап на заказ. Веб-приложение для регистрации событий в хоккейных матчах в реальном времени, а также для последующего просмотра собранной статистики.</p>
+            <p class="project-description" lang="en">Outsourced startup. Web application for registering events at a hockey game in real time for further analysis and statistics collection.</p>
+
+            <p class="project-technical" lang="ru">Поддерживается полноценная навигация и работа с клавиатуры, при этом сочетания клавиш настраиваются. Используется FS API для импорта/экспорта файлов. Бэкенд на PHP 5.6. Реализована полноценная панель управления для редактирования команд, игроков, собранной статистики матчей и др.</p>
+            <p class="project-technical" lang="en">Fully supports keyboard navigation using configurable hotkeys. Uses FS API for importing/exporting files. Backend in PHP 5.6. Has a fully functional control panel for managing teams, players, gathered statistics and much more.</p>
+
             <ul class="project-urls">
               <li><a href="https://hockeystats.ru" target="_blank">Hockeystats</a></li>
             </ul>
@@ -492,8 +518,13 @@
           </div>
           <div class="project-info">
             <h3 class="project-title">Gravity Voyage</h3>
-            <p class="project-description">Игра-таймкиллер в космическом сеттинге. Необходимо управлять ускорением корабля для перехода с одной орбиты на другую.</p>
-            <p class="project-technical">Собственный "движок" симуляции гравитации (на основе законов Ньютона).</p>
+
+            <p class="project-description" lang="ru">Игра-таймкиллер в космическом сеттинге. Необходимо управлять ускорением корабля для перехода с одной орбиты на другую.</p>
+            <p class="project-description" lang="en">Timekiller game in space setting. Player controls ship's acceleration for traveling from one planet's orbit to another.</p>
+
+            <p class="project-technical" lang="ru">Собственный "движок" симуляции гравитации (на основе законов Ньютона).</p>
+            <p class="project-technical" lang="en">Custom physics engine for gravity simulation (quite simple; based on Newton's laws).</p>
+
             <ul class="project-urls">
               <li><a href="https://play.google.com/store/apps/details?id=air.com.dobrovidov.spacerunner" target="_blank">Google Play</a></li>
             </ul>
@@ -510,9 +541,11 @@
           </div>
           <div class="project-info">
             <h3 class="project-title">Unit Converter</h3>
-            <p class="project-description">Приложение для перевода одних единиц измерения в другие.</p>
+            <p class="project-description" lang="ru">Приложение для перевода одних единиц измерения в другие.</p>
+            <p class="project-description" lang="en">Application for converting values between various measurement units.</p>
             <ul class="project-urls">
-              <li><a href="https://gitlab.com/mrnateriver/unitconverter" target="_blank">Исходный код</a></li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/unitconverter" target="_blank">Исходный код</a></li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/unitconverter" target="_blank">Source code</a></li>
               <li><a href="https://play.google.com/store/apps/details?id=com.dobrovidov.unit_converter" target="_blank">Google Play</a></li>
             </ul>
           </div>
@@ -528,9 +561,11 @@
           </div>
           <div class="project-info">
             <h3 class="project-title">Exhange Rates</h3>
-            <p class="project-description">Приложение, отображающее обменный курс для произвольных валют. Примечание: на данный момент источник данных больше не работает, поэтому курсы не загружаются.</p>
+            <p class="project-description" lang="ru">Приложение, отображающее обменный курс для произвольных валют. Примечание: на данный момент источник данных больше не работает, поэтому курсы не загружаются.</p>
+            <p class="project-description" lang="en">Application with currencies' exchange rates. Allows arbitrary conversions. Note: data provider discontinued their service, thus this application doesn't work at the time.</p>
             <ul class="project-urls">
-              <li><a href="https://gitlab.com/mrnateriver/exchangerates" target="_blank">Исходный код</a></li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/exchangerates" target="_blank">Исходный код</a></li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/exchangerates" target="_blank">Source code</a></li>
             </ul>
           </div>
         </li>
@@ -550,15 +585,24 @@
             </ul>
           </div>
           <div class="project-info">
-            <h3 class="project-title">Приложения для смартфонов Samsung на платформе Bada</h3>
-            <p class="project-description">Сама платформа безвременно почила в бозе.</p>
+            <h3 class="project-title" lang="ru">Приложения для смартфонов Samsung на платформе Bada</h3>
+            <h3 class="project-title" lang="en">Applications for Samsung smartphones with Bada OS</h3>
+
+            <p class="project-description" lang="ru">Сама платформа безвременно почила в бозе.</p>
+            <p class="project-description" lang="en">The platform itself is long gone.</p>
 
             <ul class="project-urls">
-              <li><a href="https://gitlab.com/mrnateriver/rss-bada" target="_blank">RSS Aggregator</a> (RSS-агрегатор)</li>
-              <li><a href="https://gitlab.com/mrnateriver/bashorg-bada" target="_blank">bash.org.ru</a> (клиент bash.org.ru)</li>
-              <li><a href="https://gitlab.com/mrnateriver/unitconverter-bada" target="_blank">Unit Converter</a> (конвертер единиц измерения)</li>
-              <li><a href="https://gitlab.com/mrnateriver/snake-bada" target="_blank">Snake</a> (обычная "змейка")</li>
-              <li><a href="https://gitlab.com/mrnateriver/drivernotes-bada" target="_blank">DriverNotes</a> (журнал событий для автомобилистов) © drivernotes.net</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/rss-bada" target="_blank">RSS Aggregator</a> (RSS-агрегатор)</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/bashorg-bada" target="_blank">bash.org.ru</a> (клиент bash.org.ru)</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/unitconverter-bada" target="_blank">Unit Converter</a> (конвертер единиц измерения)</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/snake-bada" target="_blank">Snake</a> (обычная "змейка")</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/drivernotes-bada" target="_blank">DriverNotes</a> (журнал событий для автомобилистов) © drivernotes.net</li>
+
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/rss-bada" target="_blank">RSS Aggregator</a></li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/bashorg-bada" target="_blank">bash.org.ru</a> (client for russian website bash.org.ru)</li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/unitconverter-bada" target="_blank">Unit Converter</a></li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/snake-bada" target="_blank">Snake</a> (minimalistic "snake" game)</li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/drivernotes-bada" target="_blank">DriverNotes</a> (diary for drivers; allowed recording events regarding owning a car) © drivernotes.net</li>
             </ul>
           </div>
         </li>
@@ -579,14 +623,22 @@
             </ul>
           </div>
           <div class="project-info">
-            <h3 class="project-title">Приложения для смарт-часов Samsung Gear на платформе Tizen Wearable</h3>
+            <h3 class="project-title" lang="ru">Приложения для смарт-часов Samsung Gear на платформе Tizen Wearable</h3>
+            <h3 class="project-title" lang="en">Applications for Samsung Gear smart watches with Tizen Wearable OS</h3>
             <ul class="project-urls">
-              <li><a href="https://gitlab.com/mrnateriver/sketchpad-tizen" target="_blank">Sketch Pad</a> (рисование заметок)</li>
-              <li><a href="https://gitlab.com/mrnateriver/unitconverter-tizen" target="_blank">Unit Converter</a> (конвертер величин)</li>
-              <li><a href="https://gitlab.com/mrnateriver/musicplayer-tizen" target="_blank">Music Player</a> (музыкальный проигрыватель)</li>
-              <li><a href="https://gitlab.com/mrnateriver/calculator-tizen" target="_blank">Calculator</a> (калькулятор)</li>
-              <li><a href="https://gitlab.com/mrnateriver/bunnies-tizen" target="_blank">Bunnies</a> (игра в стиле Whac-A-Mole)</li>
-              <li>Несколько других, не представляющих интереса</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/sketchpad-tizen" target="_blank">Sketch Pad</a> (рисование заметок)</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/unitconverter-tizen" target="_blank">Unit Converter</a> (конвертер величин)</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/musicplayer-tizen" target="_blank">Music Player</a> (музыкальный проигрыватель)</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/calculator-tizen" target="_blank">Calculator</a> (калькулятор)</li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/bunnies-tizen" target="_blank">Bunnies</a> (игра в стиле "Whac-A-Mole")</li>
+              <li lang="ru">Несколько других, не представляющих интереса</li>
+
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/sketchpad-tizen" target="_blank">Sketch Pad</a> (drawing notes or sketches)</li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/unitconverter-tizen" target="_blank">Unit Converter</a> (well, guess what - a unit converter)</li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/musicplayer-tizen" target="_blank">Music Player</a> (music player for files stored directly on the smart watch)</li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/calculator-tizen" target="_blank">Calculator</a> (simple calculator)</li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/bunnies-tizen" target="_blank">Bunnies</a> (simple "Whac-A-Mole" game)</li>
+              <li lang="en">Several others of no interest</li>
             </ul>
           </div>
         </li>
@@ -599,9 +651,11 @@
             </ul>
           </div>
           <div class="project-info">
-            <h3 class="project-title">Тестовое задание на C++: игра "Пинг-Понг"</h3>
+            <h3 class="project-title" lang="ru">Тестовое задание на C++: игра "Пинг-Понг"</h3>
+            <h3 class="project-title" lang="en">Test task in C++: "Ping-Pong" game</h3>
             <ul class="project-urls">
-              <li><a href="https://gitlab.com/mrnateriver/pingpong-sdl" target="_blank">Исходный код</a></li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/pingpong-sdl" target="_blank">Исходный код</a></li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/pingpong-sdl" target="_blank">Source code</a></li>
             </ul>
           </div>
         </li>
@@ -613,9 +667,11 @@
             </ul>
           </div>
           <div class="project-info">
-            <h3 class="project-title">Тестовое задание на Scala: многопоточный HTTP-сервер</h3>
+            <h3 class="project-title" lang="ru">Тестовое задание на Scala: многопоточный HTTP-сервер</h3>
+            <h3 class="project-title" lang="en">Test task in Scala: multithreaded HTTP-server</h3>
             <ul class="project-urls">
-              <li><a href="https://gitlab.com/mrnateriver/scalaweb" target="_blank">Исходный код</a></li>
+              <li lang="ru"><a href="https://gitlab.com/mrnateriver/scalaweb" target="_blank">Исходный код</a></li>
+              <li lang="en"><a href="https://gitlab.com/mrnateriver/scalaweb" target="_blank">Source code</a></li>
             </ul>
           </div>
         </li>
