@@ -47,8 +47,12 @@ a {
 
 article {
   max-width: var(--body-width);
-  margin: 1.4em auto;
   padding-bottom: 25vh;
+  margin: 1.4em auto;
+
+  @media print {
+    margin: 0 auto;
+  }
 }
 
 ul {

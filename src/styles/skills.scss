@@ -3,23 +3,43 @@
 /* Skills list */
 section {
   > .skills-list.contents {
-    flex-wrap: wrap;
     margin: 0 0 var(--section-rows-vertical-margin) 0;
+
+    @media screen {
+      flex-wrap: wrap;
+    }
+
+    @media print {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      column-gap: var(--section-siblings-vertical-margin);
+      row-gap: var(--section-siblings-vertical-margin);
+    }
   }
 
-  &[expanded] > .skills-list.contents {
-    display: flex;
+  @media screen {
+    &[expanded] > .skills-list.contents {
+      display: flex;
+    }
   }
 }
 
 .skills-list {
   > li {
-    flex: 0 1 160px;
-    border-radius: 0.3em;
     background: #fbfbfb;
     padding: var(--section-siblings-vertical-margin);
-    margin: var(--section-siblings-vertical-margin);
-    box-shadow: 0 0 2px #ccc;
+
+    @media screen {
+      margin: var(--section-siblings-vertical-margin);
+      flex: 0 1 160px;
+      border-radius: 0.3em;
+      box-shadow: 0 0 2px #ccc;
+    }
+
+    @media print {
+      page-break-inside: avoid;
+      border: 1px solid #ccc;
+    }
   }
 
   .skill {

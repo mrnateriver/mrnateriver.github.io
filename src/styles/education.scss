@@ -3,10 +3,15 @@
 /* Education section */
 .education {
   &-row {
-    margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
+
+    margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
+    @media print {
+      margin: 0 0 var(--section-rows-vertical-margin) 0;
+      page-break-inside: avoid;
+    }
   }
 
   &-degree {

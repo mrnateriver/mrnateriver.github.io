@@ -5,7 +5,12 @@
 /* Projects list */
 .project {
   display: flex;
+
   margin: calc(var(--section-rows-vertical-margin) * 2) 0;
+  @media print {
+    margin: 0 0 var(--section-rows-vertical-margin) 0;
+    page-break-inside: avoid;
+  }
 
   &-prefix {
     width: 95px;

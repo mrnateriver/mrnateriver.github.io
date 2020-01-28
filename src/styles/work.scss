@@ -8,7 +8,12 @@
 
   &-row {
     display: flex;
+
     margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
+    @media print {
+      margin: 0 0 var(--section-rows-vertical-margin) 0;
+      page-break-inside: avoid;
+    }
   }
 
   &-prefix {
