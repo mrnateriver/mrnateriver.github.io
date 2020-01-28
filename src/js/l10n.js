@@ -37,7 +37,20 @@ function getUserPreferredLanguage() {
 }
 
 export function updateDocumentLanguage() {
-  document.documentElement.setAttribute('lang', getUserPreferredLanguage())
+  const language = getUserPreferredLanguage()
+  document.documentElement.setAttribute('lang', language)
+
+  const titleElems = document.head.getElementsByTagName('title')
+  if (titleElems.length > 0) {
+    let localTitle = titleElems[0].getAttribute(`data-lang-${language}`)
+    if (!localTitle) {
+      localTitle = titleElems[0].getAttribute(`data-lang-en`)
+    }
+
+    if (localTitle) {
+      document.title = localTitle
+    }
+  }
 }
 
 export function getStrings() {
