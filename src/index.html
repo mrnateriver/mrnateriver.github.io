@@ -1,11 +1,39 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <title>Резюме: Добровидов Евгений Геннадьевич</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- This is needed, because not all sections are expanded by default, and if scripts are disabled, user won't be able to expand them -->
+  <noscript>
+    <style>
+      header {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.078) !important;
+        box-shadow: 0 2px 5px #ccc !important;
+      }
+      section > .contents {
+        display: block !important;
+      }
+      section > h2.section-title {
+        margin: 0 0 calc(var(--section-rows-vertical-margin) * 0.7) 0 !important;
+      }
+      section > h2.section-title:after {
+        content: none !important;
+      }
+      section > .skills-list.contents {
+        display: flex !important;
+      }
+      #personal .param {
+        display: none !important;
+      }
+      #personal .param-profiles {
+        display: flex !important;
+      }
+    </style>
+  </noscript>
 </head>
 
 <body>
@@ -62,7 +90,7 @@
           <span id="details_emails" class="param-value"></span>
         </div>
 
-        <div class="param">
+        <div class="param param-profiles">
           <span class="param-name" lang="ru">Профили</span>
           <span class="param-name" lang="en">Profiles</span>
           <span class="param-value">
