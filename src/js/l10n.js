@@ -41,8 +41,8 @@ export function updateDocumentLanguage() {
 }
 
 export function getStrings() {
-  const language = document.documentElement.getAttribute('lang') || 'ru'
+  const language = document.documentElement.getAttribute('lang') || 'en'
 
-  // `strings` could come from an arbitrary source, so fallback to RU in case current language is missing
+  // `strings` could come from an arbitrary source, so fallback to EN in case current language is missing
   return strings[language] || strings.ru
 }
