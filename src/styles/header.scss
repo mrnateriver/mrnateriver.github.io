@@ -1,50 +1,59 @@
 /// (c) Evgenii Dobrovidov, 2020
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
   box-sizing: border-box;
   background: white;
-  transition: all 0.2s ease-out;
   padding: 1.6em calc((100% - var(--body-width)) / 2);
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  .contact-buttons {
-    display: flex;
-    align-items: center;
-
-    > a {
-      display: block;
-      margin-left: var(--section-params-vertical-margin);
-
-      &.language_selector {
-        border-bottom: 1px dashed currentColor;
-      }
-
-      &:not(.language_selector) {
-        user-select: none;
-        transition: opacity 0.2s linear;
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      > i {
-        display: block;
-        font-size: 1.6em;
-      }
+  @media print {
+    .contact-buttons {
+      display: none;
     }
   }
 
-  &[sticky] {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.078);
-    box-shadow: 0 2px 5px #ccc;
+  @media screen {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: all 0.2s ease-out;
 
-    .contact-buttons > a:not(.language_selector) {
-      opacity: 1;
-      pointer-events: all;
+    .contact-buttons {
+      display: flex;
+      align-items: center;
+
+      > a {
+        display: block;
+        margin-left: var(--section-params-vertical-margin);
+
+        &.language_selector {
+          border-bottom: 1px dashed currentColor;
+        }
+
+        &:not(.language_selector) {
+          user-select: none;
+          transition: opacity 0.2s linear;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        > i {
+          display: block;
+          font-size: 1.6em;
+        }
+      }
+    }
+
+    &[sticky] {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.078);
+      box-shadow: 0 2px 5px #ccc;
+
+      .contact-buttons > a:not(.language_selector) {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 }
