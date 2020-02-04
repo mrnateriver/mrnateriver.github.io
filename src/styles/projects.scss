@@ -70,6 +70,18 @@
         @include external-url;
         font-size: 14px;
       }
+
+      @media print {
+        a {
+          > span {
+            display: none;
+          }
+
+          &:after {
+            content: attr(href);
+          }
+        }
+      }
     }
   }
   &-heading {
