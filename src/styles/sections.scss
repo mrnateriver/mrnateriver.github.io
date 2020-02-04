@@ -1,5 +1,7 @@
 /// (c) Evgenii Dobrovidov, 2020
 
+@import 'mixins';
+
 section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.078);
   background: white;
@@ -41,6 +43,12 @@ section {
     }
   }
 
+  @include narrow-screen-breakpoint {
+    > .contents {
+      padding: 0 calc(var(--section-rows-vertical-margin) * 0.7);
+    }
+  }
+
   > h2.section-title {
     padding: calc(var(--section-rows-vertical-margin) * 0.7);
 
@@ -76,6 +84,11 @@ section {
         bottom: 0.12em;
         transition: transform 0.2s ease-in-out, position 0.2s ease-in-out;
       }
+    }
+
+    @include narrow-screen-breakpoint {
+      padding: calc(var(--section-rows-vertical-margin) * 0.7) calc(var(--section-rows-vertical-margin) * 0.7);
+      margin: 0;
     }
   }
 }
