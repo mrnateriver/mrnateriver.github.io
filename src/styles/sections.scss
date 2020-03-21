@@ -36,7 +36,7 @@ section {
     }
 
     &[expanded] > h2.section-title {
-      margin-bottom: $section-rows-vertical-margin * 0.7;
+      margin-bottom: $section-rows-vertical-margin-small;
 
       &:after {
         bottom: 0;
@@ -47,19 +47,19 @@ section {
 
   @include narrow-screen-breakpoint {
     > .contents {
-      padding: 0 $section-rows-vertical-margin;
+      padding: 0 $section-rows-vertical-margin-small;
     }
   }
 
   > h2.section-title {
-    padding: $section-rows-vertical-margin * 0.7;
+    padding: $section-rows-vertical-margin-small;
 
     @media print {
-      margin: 0 $section-rows-vertical-margin * -0.7 $section-rows-vertical-margin * -0.2;
+      margin: 0 $section-rows-vertical-margin-small * -1 $section-rows-vertical-margin * -0.2;
     }
 
     @media screen {
-      margin: 0 $section-rows-vertical-margin * -0.7;
+      margin: 0 $section-rows-vertical-margin-small * -1;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -89,7 +89,7 @@ section {
     }
 
     @include narrow-screen-breakpoint {
-      padding: $section-rows-vertical-margin * 0.7;
+      padding: $section-rows-vertical-margin-small;
       margin: 0;
     }
   }

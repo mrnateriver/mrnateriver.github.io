@@ -7,7 +7,7 @@
 .project {
   display: flex;
 
-  margin: 0 0 $section-rows-vertical-margin * 2 0;
+  margin: 0 0 $section-rows-vertical-margin-big 0;
   @media print {
     margin: 0 0 $section-rows-vertical-margin 0;
     page-break-inside: avoid;
@@ -59,13 +59,12 @@
       font-size: $row-subtitle-font-size;
     }
 
-    $urls-font-size: $row-subtitle-font-size * 0.9;
     > .project-urls-title {
-      font-size: $urls-font-size;
+      font-size: $row-subtitle-font-size-small;
     }
 
     .project-urls {
-      font-size: $urls-font-size;
+      font-size: $row-subtitle-font-size-small;
 
       a[target="_blank"]:before {
         @include external-url;

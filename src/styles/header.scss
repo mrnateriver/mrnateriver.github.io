@@ -62,6 +62,6 @@ header {
   }
 
   @include narrow-screen-breakpoint {
-    padding: 1.6em $section-rows-vertical-margin * 0.7;
+    padding: 1.6em $section-rows-vertical-margin-small;
   }
 }
