@@ -6,7 +6,7 @@
 .project {
   display: flex;
 
-  margin: calc(var(--section-rows-vertical-margin) * 2) 0;
+  margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
   @media print {
     margin: 0 0 var(--section-rows-vertical-margin) 0;
     page-break-inside: avoid;
@@ -88,6 +88,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+
+    @include narrow-screen-breakpoint {
+      display: block;
+    }
   }
   &-title {
     font-size: 1.1em;
@@ -95,5 +100,6 @@
   }
   &-copyright {
     color: var(--row-subtitle-color);
+    white-space: nowrap;
   }
 }

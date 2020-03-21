@@ -1,5 +1,7 @@
 /// (c) Evgenii Dobrovidov, 2020
 
+@import 'mixins';
+
 // We could've used SASS variables, but they cannot be changed with @media-queries, so CSS custom properties FTW
 :root {
   --body-width: 768px;
@@ -9,9 +11,19 @@
   --row-subtitle-color: #555;
   --row-subtitle-font-size: 0.9em;
 }
+@include narrow-screen-breakpoint {
+  :root {
+    --body-width: 100%;
+  }
+}
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font: 16px 'Roboto', sans-serif;
+}
+@include narrow-screen-breakpoint {
+  html {
+    font-size: 14px;
+  }
 }
 
 html, body {
@@ -32,22 +44,23 @@ h2 {
 h3 {
   font-size: 1.1em;
   font-weight: 500;
-  margin: 0 0 var(--section-siblings-vertical-margin) 0;
+  margin: var(--section-siblings-vertical-margin) 0;
 }
 h4 {
   font-weight: 100;
   font-size: 1.3em;
-  margin: 0 0 calc(var(--section-siblings-vertical-margin) / 5) 0;
+  margin: calc(var(--section-siblings-vertical-margin) / 5) 0;
 }
 
 a {
+  white-space: nowrap;
   text-decoration: none;
   color: #0069c5;
 }
 
 article {
   max-width: var(--body-width);
-  padding-bottom: 25vh;
+  padding-bottom: 15vh;
   margin: 1.4em auto;
 
   @media print {

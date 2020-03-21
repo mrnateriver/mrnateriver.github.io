@@ -29,6 +29,11 @@
 
 .mail-link {
   margin: 0 0.25em;
+
+  @include narrow-screen-breakpoint {
+    margin: 0;
+    display: block;
+  }
 }
 
 .profile-link {

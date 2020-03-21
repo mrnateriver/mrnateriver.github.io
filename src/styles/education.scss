@@ -5,6 +5,7 @@
   &-row {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
@@ -22,6 +23,12 @@
   &-university {
     text-align: right;
     flex: 1;
+
+    @include narrow-screen-breakpoint {
+      text-align: left;
+      flex-basis: 100%;
+      margin-top: var(--section-siblings-vertical-margin);
+    }
   }
 
   &-years {

@@ -16,6 +16,7 @@ section {
     }
     &[expanded] > .contents {
       display: block;
+      overflow-x: hidden;
     }
 
     > ul.contents > li, > .contents > .param {
@@ -45,7 +46,7 @@ section {
 
   @include narrow-screen-breakpoint {
     > .contents {
-      padding: 0 calc(var(--section-rows-vertical-margin) * 0.7);
+      padding: 0 var(--section-rows-vertical-margin);
     }
   }
 
