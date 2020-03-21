@@ -20,9 +20,6 @@ function setPhoneContacts() {
       detailsPhone.innerText = phoneString
       detailsPhone.href = `tel:${phoneHref}`
     }
-
-    const telegramLink = document.getElementById('details_telegram_link')
-    if (telegramLink) telegramLink.href = `tg://msg?to=${phoneHref}`
   }
 }
 
