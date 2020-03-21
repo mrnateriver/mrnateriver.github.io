@@ -34,8 +34,8 @@
 
       @for $i from 0 to 5 {
         > .logo-#{$i + 1} {
-          top: -15px + $i * 10;
-          left: -15px + $i * 10;
+          top: $i * 6px;
+          left: $i * 6px;
           z-index: 1 + $i;
         }
       }
