@@ -1,9 +1,11 @@
 /// (c) Evgenii Dobrovidov, 2020
 
+@import 'vars';
+
 /* Skills list */
 section {
   > .skills-list.contents {
-    margin: 0 0 var(--section-rows-vertical-margin) 0;
+    margin: 0 0 $section-rows-vertical-margin 0;
 
     @media screen {
       flex-wrap: wrap;
@@ -12,8 +14,8 @@ section {
     @media print {
       display: grid;
       grid-template-columns: auto auto auto;
-      column-gap: var(--section-siblings-vertical-margin);
-      row-gap: var(--section-siblings-vertical-margin);
+      column-gap: $section-siblings-vertical-margin;
+      row-gap: $section-siblings-vertical-margin;
     }
   }
 
@@ -27,10 +29,10 @@ section {
 .skills-list {
   > li {
     background: #fbfbfb;
-    padding: var(--section-siblings-vertical-margin);
+    padding: $section-siblings-vertical-margin;
 
     @media screen {
-      margin: var(--section-siblings-vertical-margin);
+      margin: $section-siblings-vertical-margin;
       flex: 1 1 150px;
       border-radius: 0.3em;
       box-shadow: 0 0 2px #ccc;
@@ -48,7 +50,7 @@ section {
   }
 
   .subtitle {
-    color: var(--row-subtitle-color);
-    font-size: var(--row-subtitle-font-size);
+    color: $row-subtitle-color;
+    font-size: $row-subtitle-font-size;
   }
 }

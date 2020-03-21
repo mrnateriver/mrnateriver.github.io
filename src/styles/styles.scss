@@ -1,21 +1,7 @@
 /// (c) Evgenii Dobrovidov, 2020
 
 @import 'mixins';
-
-// We could've used SASS variables, but they cannot be changed with @media-queries, so CSS custom properties FTW
-:root {
-  --body-width: 768px;
-  --section-params-vertical-margin: 1em;
-  --section-siblings-vertical-margin: calc(var(--section-params-vertical-margin) / 2);
-  --section-rows-vertical-margin: 1.7em;
-  --row-subtitle-color: #555;
-  --row-subtitle-font-size: 0.9em;
-}
-@include narrow-screen-breakpoint {
-  :root {
-    --body-width: 100%;
-  }
-}
+@import 'vars';
 
 html {
   font: 16px 'Roboto', sans-serif;
@@ -39,17 +25,17 @@ h1 {
 h2 {
   font-size: 1.3em;
   font-weight: 400;
-  margin: calc(var(--section-rows-vertical-margin) * 0.7) 0;
+  margin: $section-rows-vertical-margin * 0.7 0;
 }
 h3 {
   font-size: 1.1em;
   font-weight: 500;
-  margin: var(--section-siblings-vertical-margin) 0;
+  margin: $section-siblings-vertical-margin 0;
 }
 h4 {
   font-weight: 100;
   font-size: 1.3em;
-  margin: calc(var(--section-siblings-vertical-margin) / 5) 0;
+  margin: $section-siblings-vertical-margin / 5 0;
 }
 
 a {
@@ -59,9 +45,13 @@ a {
 }
 
 article {
-  max-width: var(--body-width);
+  max-width: $max-body-width;
   padding-bottom: 15vh;
   margin: 1.4em auto;
+  
+  @include narrow-screen-breakpoint {
+    max-width: 100%;
+  }
 
   @media print {
     margin: 0 auto;

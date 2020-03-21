@@ -1,6 +1,7 @@
 /// (c) Evgenii Dobrovidov, 2020
 
 @import 'mixins';
+@import 'vars';
 
 section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.078);
@@ -35,7 +36,7 @@ section {
     }
 
     &[expanded] > h2.section-title {
-      margin-bottom: calc(var(--section-rows-vertical-margin) * 0.7);
+      margin-bottom: $section-rows-vertical-margin * 0.7;
 
       &:after {
         bottom: 0;
@@ -46,19 +47,19 @@ section {
 
   @include narrow-screen-breakpoint {
     > .contents {
-      padding: 0 var(--section-rows-vertical-margin);
+      padding: 0 $section-rows-vertical-margin;
     }
   }
 
   > h2.section-title {
-    padding: calc(var(--section-rows-vertical-margin) * 0.7);
+    padding: $section-rows-vertical-margin * 0.7;
 
     @media print {
-      margin: 0 calc(var(--section-rows-vertical-margin) * 0.7 * -1) calc(var(--section-rows-vertical-margin) * 0.2);
+      margin: 0 $section-rows-vertical-margin * -0.7 $section-rows-vertical-margin * -0.2;
     }
 
     @media screen {
-      margin: 0 calc(var(--section-rows-vertical-margin) * 0.7 * -1);
+      margin: 0 $section-rows-vertical-margin * -0.7;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -71,12 +72,12 @@ section {
 
       &:after {
         content: '';
-        margin-right: calc(var(--section-rows-vertical-margin) * 0.35);
+        margin-right: $section-rows-vertical-margin * 0.35;
         display: inline-block;
         vertical-align: top;
         border-style: solid;
         border-width: 0.12em 0.12em 0 0;
-        border-color: var(--row-subtitle-color);
+        border-color: $row-subtitle-color;
         height: 0.55em;
         width: 0.55em;
         transform: rotate(135deg);
@@ -88,7 +89,7 @@ section {
     }
 
     @include narrow-screen-breakpoint {
-      padding: calc(var(--section-rows-vertical-margin) * 0.7) calc(var(--section-rows-vertical-margin) * 0.7);
+      padding: $section-rows-vertical-margin * 0.7;
       margin: 0;
     }
   }

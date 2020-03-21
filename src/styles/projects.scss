@@ -1,14 +1,15 @@
 /// (c) Evgenii Dobrovidov, 2020
 
 @import 'mixins';
+@import 'vars';
 
 /* Projects list */
 .project {
   display: flex;
 
-  margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
+  margin: 0 0 $section-rows-vertical-margin * 2 0;
   @media print {
-    margin: 0 0 var(--section-rows-vertical-margin) 0;
+    margin: 0 0 $section-rows-vertical-margin 0;
     page-break-inside: avoid;
   }
 
@@ -17,7 +18,7 @@
   }
   &-logo {
     position: relative;
-    margin-bottom: var(--section-params-vertical-margin);
+    margin-bottom: $section-params-vertical-margin;
 
     > img {
       max-width: 60px;
@@ -43,11 +44,11 @@
   }
 
   &-stack {
-    font-size: var(--row-subtitle-font-size);
-    color: var(--row-subtitle-color);
+    font-size: $row-subtitle-font-size;
+    color: $row-subtitle-color;
 
     > li {
-      margin: 0 0 var(--section-siblings-vertical-margin) 0;
+      margin: 0 0 $section-siblings-vertical-margin 0;
     }
   }
 
@@ -55,10 +56,10 @@
     flex: 1;
 
     > p {
-      font-size: var(--row-subtitle-font-size);
+      font-size: $row-subtitle-font-size;
     }
 
-    $urls-font-size: calc(var(--row-subtitle-font-size) * 0.9);
+    $urls-font-size: $row-subtitle-font-size * 0.9;
     > .project-urls-title {
       font-size: $urls-font-size;
     }
@@ -99,7 +100,7 @@
     font-weight: 500;
   }
   &-copyright {
-    color: var(--row-subtitle-color);
+    color: $row-subtitle-color;
     white-space: nowrap;
   }
 }

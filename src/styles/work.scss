@@ -1,6 +1,7 @@
 /// (c) Evgenii Dobrovidov, 2020
 
 @import 'mixins';
+@import 'vars';
 
 /* Work experience section */
 .work {
@@ -9,9 +10,9 @@
   &-row {
     display: flex;
 
-    margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
+    margin: 0 0 $section-rows-vertical-margin * 2 0;
     @media print {
-      margin: 0 0 var(--section-rows-vertical-margin) 0;
+      margin: 0 0 $section-rows-vertical-margin 0;
       page-break-inside: avoid;
     }
   }
@@ -23,9 +24,9 @@
     flex: 1;
 
     > #{$top}-company-extra {
-      color: var(--row-subtitle-color);
-      font-size: calc(var(--row-subtitle-font-size) * 0.9);
-      margin: 0 0 var(--section-siblings-vertical-margin) 0;
+      color: $row-subtitle-color;
+      font-size: $row-subtitle-font-size * 0.9;
+      margin: 0 0 $section-siblings-vertical-margin 0;
     }
 
     #{$top}-url {
@@ -38,7 +39,7 @@
     }
   }
   &-prefix > div, &-info > div {
-    margin-bottom: var(--section-siblings-vertical-margin);
+    margin-bottom: $section-siblings-vertical-margin;
   }
 
   &-company-logo {
@@ -50,12 +51,12 @@
   }
 
   &-period {
-    color: var(--row-subtitle-color);
-    font-size: calc(var(--row-subtitle-font-size) * 0.9);
+    color: $row-subtitle-color;
+    font-size: $row-subtitle-font-size * 0.9;
   }
   &-duration {
-    color: var(--row-subtitle-color);
-    font-size: calc(var(--row-subtitle-font-size) * 0.8);
+    color: $row-subtitle-color;
+    font-size: $row-subtitle-font-size * 0.8;
   }
   &-header {
     display: flex;
@@ -70,7 +71,7 @@
 
   &-description {
     flex: 1 0 100%;
-    color: var(--row-subtitle-color);
-    font-size: var(--row-subtitle-font-size);
+    color: $row-subtitle-color;
+    font-size: $row-subtitle-font-size;
   }
 }

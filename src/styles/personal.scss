@@ -1,11 +1,14 @@
 /// (c) Evgenii Dobrovidov, 2020
 
+@import 'mixins';
+@import 'vars';
+
 /* Personal info */
 .param {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 0 0 var(--section-params-vertical-margin) 0;
+  margin: 0 0 $section-params-vertical-margin 0;
 
   &-name {
     font-weight: 200;
@@ -21,7 +24,7 @@
   vertical-align: middle;
 
   > img {
-    margin-left: var(--section-siblings-vertical-margin);
+    margin-left: $section-siblings-vertical-margin;
     width: 16px;
     height: 16px;
   }
@@ -37,7 +40,7 @@
 }
 
 .profile-link {
-  margin-left: var(--section-siblings-vertical-margin);
+  margin-left: $section-siblings-vertical-margin;
   display: inline-block;
   width: 1.5em;
   height: 1.5em;

@@ -21,7 +21,7 @@
         display: block !important;
       }
       section > h2.section-title {
-        margin: 0 0 calc(var(--section-rows-vertical-margin) * 0.7) 0 !important;
+        margin: 0 0 1.19em 0 !important;
       }
       section > h2.section-title:after {
         content: none !important;
@@ -43,7 +43,6 @@
   <!--
     TODO:
     1) Rewrite margin vars to fixed units (otherwise they depend on font-size and the same var results in different margins)
-    2) Rewrite vars to SCSS vars (CSS props are unnecessary)
     3) Refactor styles, extract duplicate calculations of vars
     6) Publish on GitHub pages
     7) Add page-breaks to certain sections

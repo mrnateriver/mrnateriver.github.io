@@ -1,5 +1,8 @@
 /// (c) Evgenii Dobrovidov, 2020
 
+@import 'mixins';
+@import 'vars';
+
 /* Education section */
 .education {
   &-row {
@@ -8,9 +11,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    margin: 0 0 calc(var(--section-rows-vertical-margin) * 2) 0;
+    margin: 0 0 $section-rows-vertical-margin * 2 0;
     @media print {
-      margin: 0 0 var(--section-rows-vertical-margin) 0;
+      margin: 0 0 $section-rows-vertical-margin 0;
       page-break-inside: avoid;
     }
   }
@@ -27,7 +30,7 @@
     @include narrow-screen-breakpoint {
       text-align: left;
       flex-basis: 100%;
-      margin-top: var(--section-siblings-vertical-margin);
+      margin-top: $section-siblings-vertical-margin;
     }
   }
 
@@ -35,13 +38,13 @@
     color: #777777;
     display: block;
     font-size: 0.8em;
-    margin-left: var(--section-siblings-vertical-margin);
+    margin-left: $section-siblings-vertical-margin;
   }
 
   &-graduation-project {
-    color: var(--row-subtitle-color);
-    font-size: var(--row-subtitle-font-size);
-    margin: var(--section-siblings-vertical-margin) 0 0 0;
+    color: $row-subtitle-color;
+    font-size: $row-subtitle-font-size;
+    margin: $section-siblings-vertical-margin 0 0 0;
     flex: 0 0 100%;
   }
 }

@@ -1,6 +1,7 @@
 /// (c) Evgenii Dobrovidov, 2020
 
 @import 'mixins';
+@import 'vars';
 
 header {
   background: white;
@@ -9,7 +10,7 @@ header {
   justify-content: space-between;
 
   @media print {
-    padding: 1em calc((100% - var(--body-width)) / 2);
+    padding: 1em calc((100% - #{$max-body-width}) / 2);
 
     .contact-buttons {
       display: none;
@@ -17,7 +18,7 @@ header {
   }
 
   @media screen {
-    padding: 1.6em calc((100% - var(--body-width)) / 2);
+    padding: 1.6em calc((100% - #{$max-body-width}) / 2);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -29,7 +30,7 @@ header {
 
       > a {
         display: block;
-        margin-left: var(--section-params-vertical-margin);
+        margin-left: $section-params-vertical-margin;
 
         &.language_selector {
           border-bottom: 1px dashed currentColor;
@@ -61,6 +62,6 @@ header {
   }
 
   @include narrow-screen-breakpoint {
-    padding: 1.6em calc(var(--section-rows-vertical-margin) * 0.7);
+    padding: 1.6em $section-rows-vertical-margin * 0.7;
   }
 }
