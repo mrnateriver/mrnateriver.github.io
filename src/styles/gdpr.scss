@@ -13,7 +13,7 @@
 
   transition: bottom 0.5s ease-in;
   &[dismissed] {
-    bottom: -500px; // should be well enough to cover panel's height
+    bottom: -400px; // should be well enough to cover panel's height
   }
 
   padding: 1em calc((100% - #{$max-body-width}) / 2);

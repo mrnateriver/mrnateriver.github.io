@@ -4,20 +4,21 @@ const gaScriptUrl = 'https://www.googletagmanager.com/gtag/js?id=UA-161450305-1'
 
 function setupGA() {
   window.dataLayer = window.dataLayer || []
-  dataLayer.push('js', new Date())
-  dataLayer.push('config', 'UA-161450305-1')
+  dataLayer.push(['js', new Date()])
+  dataLayer.push(['config', 'UA-161450305-1'])
 }
 
 let gaEnabled = false
 
 function enableGA() {
   if (!gaEnabled) {
+    setupGA()
+
     const script = document.createElement('script')
     script.setAttribute('async', '')
     script.setAttribute('src', gaScriptUrl)
-    script.onload = setupGA
-
     document.head.appendChild(script)
+
     gaEnabled = true
   }
 }
