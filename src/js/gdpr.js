@@ -2,10 +2,14 @@
 
 const gaScriptUrl = 'https://www.googletagmanager.com/gtag/js?id=UA-161450305-1'
 
+function gtag() {
+  window.dataLayer.push(arguments)
+}
+
 function setupGA() {
   window.dataLayer = window.dataLayer || []
-  dataLayer.push(['js', new Date()])
-  dataLayer.push(['config', 'UA-161450305-1'])
+  gtag('js', new Date())
+  gtag('config', 'UA-161450305-1')
 }
 
 let gaEnabled = false
