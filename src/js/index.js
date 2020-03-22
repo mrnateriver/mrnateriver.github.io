@@ -6,6 +6,7 @@ import { setContactDetails } from './contacts'
 import { calculateAge, calculateWorkPeriods } from './info'
 import { setupSectionsExpansion, setupStickyHeader, setupLanguageSwitch } from './ui'
 import { updateDocumentLanguage } from './l10n'
+import { setupGDPRConsentButtons } from "./gdpr";
 
 document.addEventListener('DOMContentLoaded', main)
 
@@ -23,4 +24,6 @@ function main() {
   setupSectionsExpansion()
 
   setupStickyHeader()
+
+  setupGDPRConsentButtons()
 }

@@ -1,6 +1,6 @@
 /// (c) Evgenii Dobrovidov, 2020
 
-import { getStrings, strings } from './l10n'
+import { strings } from './l10n'
 
 const birthdate = new Date('1992-06-07T00:00:00.000')
 
