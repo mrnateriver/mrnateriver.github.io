@@ -18,6 +18,15 @@ module.exports = {
         test: /\.s[c|a]ss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
+      {
+        test: /\.(jpe?g|png|svg)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 25000,
+          },
+        },
+      },
     ],
   },
   plugins: [
