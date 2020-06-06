@@ -94,6 +94,22 @@
       display: block;
     }
   }
+  &-type {
+    font-size: $row-subtitle-font-size;
+
+    &-oss {
+      &:before {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: $section-siblings-vertical-margin;
+        content: '';
+        width: 16px;
+        height: 16px;
+        background: url('../../assets/star_icon.svg');
+        background-size: contain;
+      }
+    }
+  }
   &-title {
     font-size: 1.1em;
     font-weight: 500;
