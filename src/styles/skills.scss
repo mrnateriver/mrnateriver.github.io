@@ -30,6 +30,8 @@ section {
   > li {
     background: #fbfbfb;
     padding: $section-siblings-vertical-margin;
+    box-sizing: border-box;
+    max-width: 176px;
 
     @media screen {
       margin: $section-siblings-vertical-margin;
