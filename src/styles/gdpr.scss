@@ -25,6 +25,10 @@
     display: block;
   }
 
+  @media print {
+    display: none;
+  }
+
   &-content {
     padding: 0 $section-params-vertical-margin / 2 0 $section-params-vertical-margin;
     font-size: $row-subtitle-font-size;
