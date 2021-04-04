@@ -6,6 +6,8 @@
 section {
   border-bottom: 1px solid var(--border-color);
   background: var(--background-color);
+  margin: 0 calc(-1 * var(--section-horizontal-padding));
+  padding: 0 var(--section-horizontal-padding);
 
   &:last-of-type {
     border: none;
@@ -46,20 +48,21 @@ section {
   }
 
   @include narrow-screen-breakpoint {
+    padding: 0;
     > .contents {
       padding: 0 $section-rows-vertical-margin-small;
     }
   }
 
   > h2.section-title {
-    padding: $section-rows-vertical-margin-small;
-
     @media print {
-      margin: 0 $section-rows-vertical-margin-small * -1 $section-rows-vertical-margin * -0.2;
+      margin: 0 $section-rows-vertical-margin-small * -1 $section-rows-vertical-margin;
+      padding: $section-rows-vertical-margin-small;
     }
 
     @media screen {
-      margin: 0 $section-rows-vertical-margin-small * -1;
+      margin: 0 calc(-1 * var(--section-horizontal-padding));
+      padding: $section-rows-vertical-margin-small var(--section-horizontal-padding);
       display: flex;
       justify-content: space-between;
       align-items: center;

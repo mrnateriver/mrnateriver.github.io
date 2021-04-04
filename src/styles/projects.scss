@@ -9,7 +9,6 @@
 
   margin: 0 0 $section-rows-vertical-margin-big 0;
   @media print {
-    margin: 0 0 $section-rows-vertical-margin 0;
     page-break-inside: avoid;
   }
 
@@ -99,15 +98,17 @@
     font-size: $row-subtitle-font-size;
 
     &-oss {
-      &:before {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: $section-siblings-vertical-margin;
-        content: '';
-        width: 16px;
-        height: 16px;
-        background: url('../../assets/star_icon.svg');
-        background-size: contain;
+      @media screen {
+        &:before {
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: $section-siblings-vertical-margin;
+          content: '';
+          width: 16px;
+          height: 16px;
+          background: url('../../assets/star_icon.svg');
+          background-size: contain;
+        }
       }
     }
   }

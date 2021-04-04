@@ -10,10 +10,8 @@ function handleSectionClick(evt) {
   }
 }
 
-function handlePageScrollForStickyHeader() {
-  // https://stackoverflow.com/a/3464890/5877243
-  const doc = document.documentElement
-  const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
+function handlePageScrollForStickyHeader(article) {
+  const top = this.offsetTop - article.offsetTop
 
   // we assume here that header should stick to the very top
   if (top > 0) {
@@ -36,7 +34,12 @@ export function setupSectionsExpansion() {
 export function setupStickyHeader() {
   const header = document.querySelector('header')
   if (header) {
-    document.addEventListener('scroll', handlePageScrollForStickyHeader.bind(header), { passive: true })
+    // FIXME: fix on mobile devices (narrow-screen breakpoint)
+    const container = document.querySelector('#scroll_container');
+    const article = document.querySelector('#main_article');
+    if (container && article) {
+      container.addEventListener('scroll', handlePageScrollForStickyHeader.bind(header, article), { passive: true })
+    }
   }
 }
 

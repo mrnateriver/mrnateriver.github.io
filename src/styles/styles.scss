@@ -1,9 +1,10 @@
 /// (c) Evgenii Dobrovidov, 2020
 
-@import 'mixins';
-@import 'vars';
+@import "mixins";
+@import "vars";
 
 :root {
+  --parallax-overlay-color: #{$parallax-overlay-color-light};
   --background-color: #{$background-color-light};
   --text-color: #{$text-color-light};
   --text-secondary-color: #{$text-secondary-color-light};
@@ -13,9 +14,12 @@
   --surface-hover-color: #{$surface-hover-color-light};
   --border-color: #{$border-color-light};
   --header-shadow-color: #{$header-shadow-color-light};
+
+  --section-horizontal-padding: #{$section-horizontal-padding};
 }
 @media only screen and (prefers-color-scheme: dark) {
   :root {
+    --parallax-overlay-color: #{$parallax-overlay-color-dark};
     --background-color: #{$background-color-dark};
     --text-color: #{$text-color-dark};
     --text-secondary-color: #{$text-secondary-color-dark};
@@ -27,9 +31,14 @@
     --header-shadow-color: #{$header-shadow-color-dark};
   }
 }
+@include narrow-screen-breakpoint {
+  :root {
+    --section-horizontal-padding: #{$section-params-vertical-margin};
+  }
+}
 
 html {
-  font: 16px 'Roboto', sans-serif;
+  font: 16px "Roboto", sans-serif;
 }
 @include narrow-screen-breakpoint {
   html {
@@ -37,7 +46,8 @@ html {
   }
 }
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
 }
@@ -54,7 +64,7 @@ h1 {
 }
 h2 {
   font-size: 1.3em;
-  font-weight: 400;
+  font-weight: 300;
   margin: $section-rows-vertical-margin-small 0;
 }
 h3 {
@@ -74,16 +84,19 @@ a {
 }
 
 article {
+  flex: 1;
+  margin: 0 auto;
+  background: var(--background-color);
+
   max-width: $max-body-width;
-  padding-bottom: 15vh;
-  margin: 1.4em auto;
-  
   @include narrow-screen-breakpoint {
     max-width: 100%;
   }
 
-  @media print {
-    margin: 0 auto;
+  @media screen {
+    padding: 0 var(--section-horizontal-padding) 1.4em var(--section-horizontal-padding);
+    box-shadow: 0 0 200px 60px var(--header-shadow-color);
+    border-radius: $article-border-radius;
   }
 }
 
@@ -93,8 +106,9 @@ ul {
   margin: 0;
 }
 
-.material-icon, a[target="_blank"]:before {
-  font-family: 'Material Icons';
+.material-icon,
+a[target="_blank"]:before {
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -108,13 +122,13 @@ ul {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }
 
-html[lang=ru] *[lang]:not([lang=ru]) {
+html[lang="ru"] *[lang]:not([lang="ru"]) {
   display: none;
 }
-html[lang=en] *[lang]:not([lang=en]) {
+html[lang="en"] *[lang]:not([lang="en"]) {
   display: none;
 }
 
@@ -125,11 +139,96 @@ svg.ctlst-logo {
   }
 }
 
-@import 'header';
-@import 'sections';
-@import 'personal';
-@import 'education';
-@import 'work';
-@import 'skills';
-@import 'projects';
-@import 'gdpr';
+@media print, screen and (max-width: 835px) {
+  #background_backdrop,
+  #background_code_left,
+  #background_code_right {
+    display: none;
+  }
+}
+@media only screen and (min-width: 836px) {
+  .scroll-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+  }
+
+  .article-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    transform: translateZ(0);
+    min-height: 100vh;
+    padding: var(--section-horizontal-padding) 0;
+    box-sizing: border-box;
+  }
+
+  #background_backdrop {
+    transform: scale(1);
+
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 10000vh;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      background: var(--parallax-overlay-color);
+      @supports (
+        (-webkit-backdrop-filter: blur(7px)) or (backdrop-filter: blur(7px))
+      ) {
+        background: transparent;
+        backdrop-filter: blur(7px);
+      }
+    }
+  }
+
+  #background_code_left,
+  #background_code_right {
+    z-index: 0;
+    margin: 0;
+    transform: translateZ(-2px) scale(3);
+    position: absolute;
+    
+    // FIXME: fix Firefox
+    overflow: hidden;
+    bottom: 0;
+
+    right: 0;
+    left: 0;
+
+    code {
+      font-family: monospace;
+      font-weight: 600;
+      font-size: 11px;
+
+      // position: absolute;
+      // bottom: 0; // Chosen empirically
+      // left: 0;
+      // right: 0;
+    }
+  }
+  #background_code_right {
+    transform: translateZ(-4px) scale(-4, 4);
+    left: -30%;
+    right: 0;
+  }
+}
+
+@import "header";
+@import "sections";
+@import "personal";
+@import "education";
+@import "work";
+@import "skills";
+@import "projects";
+@import "gdpr";

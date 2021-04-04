@@ -7,6 +7,7 @@ import { calculateAge, calculateWorkPeriods } from './info'
 import { setupSectionsExpansion, setupStickyHeader, setupLanguageSwitch } from './ui'
 import { updateDocumentLanguage } from './l10n'
 import { setupGDPRConsentButtons } from "./gdpr";
+import { setupCodeBackground } from "./code-bg";
 
 document.addEventListener('DOMContentLoaded', main)
 
@@ -26,4 +27,6 @@ function main() {
   setupStickyHeader()
 
   setupGDPRConsentButtons()
+
+  setupCodeBackground();
 }

@@ -18,11 +18,14 @@ header {
   }
 
   @media screen {
-    padding: 1.6em calc((100% - #{$max-body-width}) / 2);
     position: sticky;
-    top: 0;
     z-index: 10;
-    transition: box-shadow 0.2s ease-out;
+    top: 0;
+    transition: box-shadow .2s ease-out;
+    padding: 1.4em var(--section-horizontal-padding);
+    margin: 0 calc(-1 * var(--section-horizontal-padding));
+    border-top-left-radius: $article-border-radius;
+    border-top-right-radius: $article-border-radius;
 
     .contact-buttons {
       display: flex;

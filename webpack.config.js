@@ -15,6 +15,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+      },
+      {
         test: /\.s[c|a]ss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
@@ -38,6 +42,7 @@ module.exports = {
       template: './src/index.html',
       filename: "../index.html",
       minify: {
+        html5: true,
         collapseInlineTagWhitespace: true,
         collapseWhitespace: true,
         conservativeCollapse: true,
