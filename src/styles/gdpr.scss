@@ -34,7 +34,11 @@
     font-size: $row-subtitle-font-size;
 
     a {
+      // Theme color for anchors is too dark for black background, so we'll have to use custom color in GDPR popup
       color: deepskyblue;
+      @media only screen and (prefers-color-scheme: dark) {
+        color: var(--anchor-color);
+      }
     }
   }
 

@@ -35,7 +35,7 @@
   }
 
   &-years {
-    color: #777777;
+    color: var(--text-secondary-color);
     display: block;
     font-size: 0.8em;
     margin-left: $section-siblings-vertical-margin;
@@ -47,7 +47,7 @@
   }
 
   &-graduation-project {
-    color: $row-subtitle-color;
+    color: var(--text-secondary-color);
     font-size: $row-subtitle-font-size;
     margin: $section-siblings-vertical-margin 0 0 0;
     flex: 0 0 100%;

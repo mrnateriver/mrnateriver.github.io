@@ -4,7 +4,7 @@
 @import 'vars';
 
 header {
-  background: white;
+  background: var(--background-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    transition: all 0.2s ease-out;
+    transition: box-shadow 0.2s ease-out;
 
     .contact-buttons {
       display: flex;
@@ -51,8 +51,8 @@ header {
     }
 
     &[sticky] {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.078);
-      box-shadow: 0 2px 5px #ccc;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 5px var(--header-shadow-color);
 
       .contact-buttons > a:not(.language_selector) {
         opacity: 1;

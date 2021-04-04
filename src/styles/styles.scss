@@ -3,6 +3,31 @@
 @import 'mixins';
 @import 'vars';
 
+:root {
+  --background-color: #{$background-color-light};
+  --text-color: #{$text-color-light};
+  --text-secondary-color: #{$text-secondary-color-light};
+  --anchor-color: #{$anchor-color-light};
+  --surface-color: #{$surface-color-light};
+  --surface-shadow-color: #{$surface-shadow-color-light};
+  --surface-hover-color: #{$surface-hover-color-light};
+  --border-color: #{$border-color-light};
+  --header-shadow-color: #{$header-shadow-color-light};
+}
+@media only screen and (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #{$background-color-dark};
+    --text-color: #{$text-color-dark};
+    --text-secondary-color: #{$text-secondary-color-dark};
+    --anchor-color: #{$anchor-color-dark};
+    --surface-color: #{$surface-color-dark};
+    --surface-shadow-color: #{$surface-shadow-color-dark};
+    --surface-hover-color: #{$surface-hover-color-dark};
+    --border-color: #{$border-color-dark};
+    --header-shadow-color: #{$header-shadow-color-dark};
+  }
+}
+
 html {
   font: 16px 'Roboto', sans-serif;
 }
@@ -15,6 +40,11 @@ html {
 html, body {
   padding: 0;
   margin: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 h1 {
@@ -40,7 +70,7 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #0069c5;
+  color: var(--anchor-color);
 }
 
 article {
@@ -88,6 +118,12 @@ html[lang=en] *[lang]:not([lang=en]) {
   display: none;
 }
 
+svg.ctlst-logo {
+  width: 80px;
+  > path {
+    fill: var(--text-color);
+  }
+}
 
 @import 'header';
 @import 'sections';

@@ -24,7 +24,7 @@
     flex: 1;
 
     > #{$top}-company-extra {
-      color: $row-subtitle-color;
+      color: var(--text-secondary-color);
       font-size: $row-subtitle-font-size-small;
       margin: 0 0 $section-siblings-vertical-margin 0;
     }
@@ -43,6 +43,8 @@
   }
 
   &-company-logo {
+    display: flex;
+    justify-content: center;
     width: 100px;
 
     > img {
@@ -51,11 +53,11 @@
   }
 
   &-period {
-    color: $row-subtitle-color;
+    color: var(--text-secondary-color);
     font-size: $row-subtitle-font-size-small;
   }
   &-duration {
-    color: $row-subtitle-color;
+    color: var(--text-secondary-color);
     font-size: $row-subtitle-font-size-small;
   }
   &-header {
@@ -71,7 +73,7 @@
 
   &-description {
     flex: 1 0 100%;
-    color: $row-subtitle-color;
+    color: var(--text-secondary-color);
     font-size: $row-subtitle-font-size;
   }
 }

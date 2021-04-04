@@ -46,7 +46,7 @@
 
   &-stack {
     font-size: $row-subtitle-font-size;
-    color: $row-subtitle-color;
+    color: var(--text-secondary-color);
 
     > li {
       margin: 0 0 $section-siblings-vertical-margin 0;
@@ -116,7 +116,7 @@
     font-weight: 500;
   }
   &-copyright {
-    color: $row-subtitle-color;
+    color: var(--text-secondary-color);
     white-space: nowrap;
   }
 }
