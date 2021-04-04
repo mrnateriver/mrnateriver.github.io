@@ -511,6 +511,39 @@
 
         <li class="project">
           <div class="project-prefix">
+            <ul class="project-stack">
+              <li>Node.js</li>
+              <li>PostgreSQL</li>
+              <li>TimescaleDB</li>
+              <li>NATS</li>
+              <li>Redis</li>
+              <li>Nrwl/Nx</li>
+              <li>NestJs</li>
+              <li>TypeScript</li>
+              <li>React</li>
+            </ul>
+          </div>
+          <div class="project-info">
+            <div class="project-heading">
+              <h3 class="project-title">CTLST Telemetry Analysis Platform</h3>
+              <div class="project-copyright">© Catalyst Aerospace Technologies Inc.</div>
+            </div>
+
+            <p class="project-description" lang="ru">Инфраструктура, API и фронтенд SaaS-решения для загрузки, классификации, просмотра и анализа телеметрических данных с БПЛА.</p>
+            <p class="project-description" lang="en">Infrastructure, API and frontend of a SaaS-solution for uploading, classification, viewing and analysis of telemetry data, gathered from UAV.</p>
+
+            <p class="project-technical" lang="ru">Микросервисная архитектура (<a href="https://12factor.net/" target="_blank">12-факторные</a> приложения), фреймворк <a href="https://nestjs.com/" target="_blank">NestJS</a>, обмен данными через <a href="https://nats.io/" target="_blank">NATS</a> (диспетчеризация событий) и Redis (очередь задач с исп. <a href="https://github.com/OptimalBits/bull" target="_blank">Bull</a>), разделение на зоны доступности/ответственности/масштабируемости, потоковый обмен данными с клиентами по протоколу WebSocket, CRUD, валидация запросов, аутентификация с пом. OAuth2/OIDC (с исп. <a href="https://www.keycloak.org/" target="_blank">Keycloak</a>), RBAC/ABAC-авторизация, партиционирование БД по организациям (SaaS-составляющая; вкл. интеграцию с Keycloak), окружение для разработки и развертывание с пом. Docker, монорепозиторий на <a href="https://nx.dev/" target="_blank">Nrwl/Nx</a>, unit- и e2e-тесты, изоморфный код на TypeScript, фронтенд на TypeScript + React (целиком на Reach Hooks), UI - <a href="https://github.com/microsoft/fluentui">@fluentui/react</a>, решение для стилей <a href="https://github.com/microsoft/fluentui/blob/master/packages/merge-styles/README.md">из этого же фреймворка</a>).</p>
+
+            <p class="project-technical" lang="en">Microservices (<a href="https://12factor.net/" target="_blank">12-factor</a> apps), <a href="https://nestjs.com/" target="_blank">NestJS</a> framework, data exchange using <a href="https://nats.io/" target="_blank">NATS</a> (events dispatching) and Redis (task queue using <a href="https://github.com/OptimalBits/bull" target="_blank">Bull</a>), availability/responsibility/scalability zones separation, data streaming to/from clients using WebSocket protocol, CRUD, requests validation, authentication using OAuth2/OIDC (with <a href="https://www.keycloak.org/" target="_blank">Keycloak</a>), RBAC/ABAC-authorization, DB partitioning by organizations (SaaS-part of the project; inc. Keycloak integration), development and production environments using Docker, monorepository using <a href="https://nx.dev/" target="_blank">Nrwl/Nx</a>, unit- and e2e-tests, isomorphic TypeScript, frontend using TypeScript + React (entirely with Reach Hooks), UI - <a href="https://github.com/microsoft/fluentui">@fluentui/react</a>, styling solution <a href="https://github.com/microsoft/fluentui/blob/master/packages/merge-styles/README.md">from the same framework</a>).</p>
+
+            <ul class="project-urls">
+              <li><a href="https://ctlst.tech" target="_blank"><span>ctlst.tech</span></a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="project-prefix">
             <div class="project-logo"><img src="assets/bellini_backoffice_icon.png" alt="Bellini API logo"></div>
             <ul class="project-stack">
               <li>PHP 7.1</li>
