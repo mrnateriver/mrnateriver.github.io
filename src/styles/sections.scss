@@ -11,6 +11,14 @@ section {
 
   &:last-of-type {
     border: none;
+    
+    &[expanded] > .contents {
+      padding-bottom: var(--section-horizontal-padding);
+    }
+
+    // Just as with header's rounded corners, set them for the last section
+    border-bottom-left-radius: $article-border-radius;
+    border-bottom-right-radius: $article-border-radius;
   }
 
   @media screen {
@@ -23,11 +31,11 @@ section {
     }
 
     > ul.contents > li, > .contents > .param {
-      animation-duration: 250ms;
+      animation-duration: 150ms;
       animation-fill-mode: both;
       animation-timing-function: ease-in-out;
 
-      @for $i from 1 to 21 {
+      @for $i from 1 to 32 {
         &:nth-child(#{$i}) {
           animation-delay: ($i - 1) * 50ms;
         }

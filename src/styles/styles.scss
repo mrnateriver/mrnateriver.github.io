@@ -4,7 +4,6 @@
 @import "vars";
 
 :root {
-  --parallax-overlay-color: #{$parallax-overlay-color-light};
   --background-color: #{$background-color-light};
   --text-color: #{$text-color-light};
   --text-secondary-color: #{$text-secondary-color-light};
@@ -19,7 +18,6 @@
 }
 @media only screen and (prefers-color-scheme: dark) {
   :root {
-    --parallax-overlay-color: #{$parallax-overlay-color-dark};
     --background-color: #{$background-color-dark};
     --text-color: #{$text-color-dark};
     --text-secondary-color: #{$text-secondary-color-dark};
@@ -55,6 +53,14 @@ body {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  @include wide-screen-breakpoint {
+    padding: $section-horizontal-padding 0;
+  }
 }
 
 h1 {
@@ -88,13 +94,12 @@ article {
   margin: 0 auto;
   background: var(--background-color);
 
-  max-width: $max-body-width;
-  @include narrow-screen-breakpoint {
-    max-width: 100%;
+  @include wide-screen-breakpoint {
+    max-width: $max-body-width;
   }
 
   @media screen {
-    padding: 0 var(--section-horizontal-padding) 1.4em var(--section-horizontal-padding);
+    padding: 0 var(--section-horizontal-padding);
     box-shadow: 0 0 200px 60px var(--header-shadow-color);
     border-radius: $article-border-radius;
   }
@@ -136,91 +141,6 @@ svg.ctlst-logo {
   width: 80px;
   > path {
     fill: var(--text-color);
-  }
-}
-
-@media print, screen and (max-width: 835px) {
-  #background_backdrop,
-  #background_code_left,
-  #background_code_right {
-    display: none;
-  }
-}
-@media only screen and (min-width: 836px) {
-  .scroll-container {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 1px;
-  }
-
-  .article-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    transform: translateZ(0);
-    min-height: 100vh;
-    padding: var(--section-horizontal-padding) 0;
-    box-sizing: border-box;
-  }
-
-  #background_backdrop {
-    transform: scale(1);
-
-    z-index: 1;
-    position: absolute;
-    right: 0;
-    left: 0;
-
-    &::after {
-      content: "";
-      display: block;
-      height: 10000vh;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-
-      background: var(--parallax-overlay-color);
-      @supports (
-        (-webkit-backdrop-filter: blur(7px)) or (backdrop-filter: blur(7px))
-      ) {
-        background: transparent;
-        backdrop-filter: blur(7px);
-      }
-    }
-  }
-
-  #background_code_left,
-  #background_code_right {
-    z-index: 0;
-    margin: 0;
-    transform: translateZ(-2px) scale(3);
-    position: absolute;
-    
-    // FIXME: fix Firefox
-    overflow: hidden;
-    bottom: 0;
-
-    right: 0;
-    left: 0;
-
-    code {
-      font-family: monospace;
-      font-weight: 600;
-      font-size: 11px;
-
-      // position: absolute;
-      // bottom: 0; // Chosen empirically
-      // left: 0;
-      // right: 0;
-    }
-  }
-  #background_code_right {
-    transform: translateZ(-4px) scale(-4, 4);
-    left: -30%;
-    right: 0;
   }
 }
 

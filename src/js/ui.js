@@ -34,11 +34,9 @@ export function setupSectionsExpansion() {
 export function setupStickyHeader() {
   const header = document.querySelector('header')
   if (header) {
-    // FIXME: fix on mobile devices (narrow-screen breakpoint)
-    const container = document.querySelector('#scroll_container');
     const article = document.querySelector('#main_article');
-    if (container && article) {
-      container.addEventListener('scroll', handlePageScrollForStickyHeader.bind(header, article), { passive: true })
+    if (article) {
+      document.addEventListener('scroll', handlePageScrollForStickyHeader.bind(header, article), { passive: true })
     }
   }
 }

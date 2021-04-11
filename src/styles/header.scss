@@ -24,6 +24,9 @@ header {
     transition: box-shadow .2s ease-out;
     padding: 1.4em var(--section-horizontal-padding);
     margin: 0 calc(-1 * var(--section-horizontal-padding));
+
+    // We cannot set `overflow: hidden` on `article`, because it would break sticky positioning
+    // So, to preserve rounded corners, set them on header element itself
     border-top-left-radius: $article-border-radius;
     border-top-right-radius: $article-border-radius;
 
