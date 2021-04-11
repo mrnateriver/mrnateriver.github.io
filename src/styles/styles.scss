@@ -53,12 +53,12 @@ body {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  min-height: 100vh;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
 
   @include wide-screen-breakpoint {
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
     padding: $section-horizontal-padding 0;
   }
 }
@@ -94,14 +94,17 @@ article {
   margin: 0 auto;
   background: var(--background-color);
 
-  @include wide-screen-breakpoint {
-    max-width: $max-body-width;
-  }
-
   @media screen {
     padding: 0 var(--section-horizontal-padding);
-    box-shadow: 0 0 200px 60px var(--header-shadow-color);
-    border-radius: $article-border-radius;
+  }
+
+  @include wide-screen-breakpoint {
+    max-width: $max-body-width;
+
+    @media screen {
+      box-shadow: 0 0 200px 60px var(--header-shadow-color);
+      border-radius: $article-border-radius;
+    }
   }
 }
 
